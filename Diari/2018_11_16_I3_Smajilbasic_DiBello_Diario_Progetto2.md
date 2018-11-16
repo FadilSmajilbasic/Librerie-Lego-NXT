@@ -4,7 +4,7 @@
 
 ## Lavori svolti
 Abbiamo fatto il test le prime 2 ore
-Abbiamo scritto il punto 1.1 della documentazione 
+Abbiamo completamente finito  il capitolo 1 "Introduzione" della Documentazione. Saimo passati da scrivere la documentazione di word a quella scritta in markdown,Luca ha scritto l'analisi del dominio   
 
 
 #### Problemi riscontrati e soluzioni adottate
@@ -17,7 +17,7 @@ questi commandi aggiornano la repository locale con quella originale che si trov
 
 
 Abbiamo adottato un altra soluzione:
-usiamo la repo principale.
+Usiamo la repo principale.
 
 ---
 <!-- ####Punto della situazione rispetto alla pianificazione -->
