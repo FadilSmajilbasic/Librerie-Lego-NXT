@@ -1,5 +1,5 @@
 # PROGETTO 2 | Diario di lavoro - 16.11.2018
-##### Fadil Smajilbasic, Luca DiBello
+##### Fadil Smajilbasic, Luca Di Bello
 ### Canobbio, [16.11.2018]
 
 ## Lavori svolti
