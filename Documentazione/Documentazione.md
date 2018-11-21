@@ -74,51 +74,22 @@ Gli alunni che utilizzano i robot Lego non hanno mai programmato i blocchetti in
 
 ### Analisi e specifica dei requisiti
 
-  Il progettista, dopo aver ricevuto il mandato, in collaborazione con il
-  committente redige una lista di requisiti. Durante questi incontri,
-  tramite interviste (da inserire nei diari), il progettista deve cercare
-  di rispondere alle seguenti domande:
+  Il committente necessita di due librerie (una scritta in Java ed una scritta in RobotC). Il loro scopo è quello di semplificare il processo di programmazione dei robot della lego (sia NXT che EV3), esse devono comprendere dei metodi user-friendly, quindi che vengono richiamati e funzionano senza nessun bisogno di una programmazione aggiuntiva da parte dell'utilizzatore. Oltre alle libreria il committente necessita anche di una guida cartacea che spiega il processo di installazione dei firmware per far interagire le nostre librerie con il blocchetto.
+  Per usufruire semplificazioni del codice che offre il nostro prodotto bisogna soltanto importare la libreria (indipendentemente dal linguaggio). Essa conterrà degli oggetti, tramite i quali sarà possibile accedere a delle funzioni prefabbricate. Questo perchè l'obbiettivo del nostro lavoro è di creare un prodotto plug-and-play, il quale non necessita molte conoscenze di programmazione per essere utilizzato. L'utente quindi dovrà interagire minimamente con il codice, l'unica cosa che dovrà fare è creare un algoritmo utilizzando le funzioni già scritte all'interno della libreria, quindi non fa altro che fare un collage di funzioni al fine di raggiungere un algoritmo che svolge un azione desiderata.
+  Entrambe le librerie saranno in grado di fare le stesse determinate cose, l'unica differenza tra di loro sono le prestazioni: Java essendo un linguaggio interpretato sarà molto più lento rispetto al linguaggio RobotC.
 
-  -   Quali sono i bisogni del committente?
+  <b style="color:red">DA FARE LA SPECIFICA DEI REQUISITI</b>
 
-  -   Quali funzioni deve svolgere il prodotto?
-
-  -   Come devono essere implementate?
-
-  -   L’utente, come vorrebbe/dovrebbe interagire con il prodotto?
-
-  -   Come verrà utilizzato il prodotto?
-
-  -   Che tipo di interfaccia si immagina?
-
-  -   Che prestazioni minime deve fornire il prodotto?
-
-  -   Che grado di sicurezza deve avere il prodotto?
-
-  -   …
-
-  In base alla lista dei requisiti e all’analisi degli stessi, il
-  progettista redige una *specifica dei requisiti* in cui elenca e
-  descrive in modo dettagliato quali sono le funzionalità che il prodotto
-  fornirà. La specifica dovrebbe essere abbastanza dettagliata da poter
-  essere utilizzata come base per lo sviluppo, ma non troppo; ad esempio
-  non dovrebbe contenere dettagli di implementazione, o definizioni
-  dettagliate dell’interfaccia grafica a meno che questi non siano
-  considerati cruciali. Non si deve scordare che i requisiti non
-  rappresentano delle attività bensì delle caratteristiche che il prodotto
-  dovrà possedere.
-
-
-  |ID  |REQ-012                                         |
+  |ID  |REQ-001                                         |
   |----|------------------------------------------------|
   |**Nome**    |Creazione interfaccia |
   |**Priorità**|1                     |
   |**Versione**|1.0                   |
   |**Note**    |Si necessitano i permessi di root / Dipende dal requisito REQ-001 (Creazione DB)|
-  |            |**Sotto requisiti** |
-  |**001**      | Si necessita una maschera di login  |
-  |**002**      | Si dovranno poter immettere nuovi allievi                 |
-  |**003**      | Dovrà essere possibile la ricerca di allievi                   |
+  |            |**Sotto requisiti**|
+  |**001**      | Si necessita una maschera di login|
+  |**002**      | Si dovranno poter immettere nuovi allievi|
+  |**003**      | Dovrà essere possibile la ricerca di allievi|
 
   
 
@@ -144,12 +115,6 @@ vecchie dovranno essere inserite nei diari.
 requisiti.
 
 **Sotto requisiti**: elementi che compongono il requisito.
-
-
-### Use case
-
-I casi d’uso rappresentano l’interazione tra i vari attori e le
-funzionalità del prodotto.
 
 ### Pianificazione
 
@@ -310,36 +275,6 @@ facilmente generalizzabili o sono specifici di un caso particolare? ecc
 
 ### Considerazioni personali
   Cosa ho imparato in questo progetto? ecc
-
-## Bibliografia
-
-### Bibliografia per articoli di riviste
-1.  Cognome e nome (o iniziali) dell’autore o degli autori, o nome
-    dell’organizzazione,
-
-2.  Titolo dell’articolo (tra virgolette),
-
-3.  Titolo della rivista (in italico),
-
-4.  Anno e numero
-
-5.  Pagina iniziale dell’articolo,
-
-### Bibliografia per libri
-
-
-1.  Cognome e nome (o iniziali) dell’autore o degli autori, o nome
-    dell’organizzazione,
-
-2.  Titolo del libro (in italico),
-
-3.  ev. Numero di edizione,
-
-4.  Nome dell’editore,
-
-5.  Anno di pubblicazione,
-
-6.  ISBN.
 
 ### Sitografia
 
