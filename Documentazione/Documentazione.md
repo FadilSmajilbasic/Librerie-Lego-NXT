@@ -52,12 +52,12 @@
 ### Informazioni sul progetto
 
   Il progetto sarà gestito e realizzato dall’allievo Luca Di Bello e Fadil Smajlbasic (studenti di informatica all’Arti e Mestieri di Trevano) sotto la supervisione del professor Luca Muggiasca, Adriano Barchi, Francesco Mussi e dalla professoressa Elisa Nannini.
-La realizzazione del progetto prenderà piede il 16 novembre 2018 (16/11/18) e dovrà essere consegnato entro il <INSERIRE DATA DI CONSEGNA>
+  La realizzazione del progetto prenderà piede il 16 novembre 2018 (16/11/18) e dovrà essere consegnato entro il <INSERIRE DATA DI CONSEGNA>
 
 
 ### Abstract
 
- In this document we will describe how we made a library for the Lego Mindstorms NXT. The library needed to be simple to use. Before our solution the users needed to use the IDE provided by Lego which obligates the users to use program the programs with the graphical interface, using their solution makes even a simple line follower a frustrating operation of needing to use the drag and drop function of the “Lego programming blocks”. We were tasked to make the process simpler creating a library with some useful functions for the various input-output interfaces (buttons, gyros, ultrasonic sensors, motors, ecc.) that the NXT has to offer, furthermore it uses the standard coding format that a lot of programming use since it derives from C. We had two languages to write the library: The first was Java and the second is RobotC. Based on the execution time and the efficiency we need to choose one over the other and motivate the choice. With the help of this library an average student should be able to do basic programs for the Lego NXT without any problems. 
+ In this document we will describe how we made a library for the Lego Mindstorms NXT. The library needed to be simple to use. Before our solution the users needed to use the IDE provided by Lego, and use the graphical interface whitch makes even a simple line follower a frustrating operation of needing to use the drag and drop function of the “Lego programming blocks”. We were tasked to make the process simpler creating a library with some useful functions for the various input-output interfaces (buttons, gyros, ultrasonic sensors, motors, ecc.) that the NXT has to offer, furthermore it uses the standard coding format that a lot of programming languages use since it derives from C. We had two languages to write the library: The first was Java and the second is RobotC. Based on the execution time and the efficiency we had to choose one or the other and motivate the choice. With the help of this library an average student should be able to do basic programs for the Lego NXT without any problems.
 
 ### Scopo
 
@@ -132,6 +132,10 @@ Se si usano altri metodi di pianificazione (es scrum), dovranno apparire
 in questo capitolo.
 
 ### Analisi dei mezzi
+
+Per la realizzazione della libreria nel linguaggio RobotC useremo l'IDE di RobotC (v4.56) con la licenza fornita dalla scuola.
+Per la realizzazione della libreria nel linguaggio Java useremo l'IDE NetBeans (v8.2).
+Il prodotto
 
 Elencare e *descrivere* i mezzi disponibili per la realizzazione del
 progetto. Ricordarsi di sempre descrivere nel dettaglio le versioni e il
