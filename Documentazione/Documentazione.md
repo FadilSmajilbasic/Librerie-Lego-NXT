@@ -137,6 +137,7 @@ Per la realizzazione della libreria nel linguaggio RobotC useremo l'IDE di Robot
 Invece per la realizzazione della libreria nel linguaggio Java useremo l'IDE NetBeans (v8.2). Per poter sviluppare la libreria in Java necessitiamo del firmware di leJos <version> e della relativa libreria "leJos 0.9.1-beta"
 Il prodotto verrà utilizzato dagli sviluppatori per programmare i loro algoritmi.
 La nostra soluzione verrà svulippata e testata utilizzando un Lego NXT ma dovrà funzionare anche sui Lego EV3.
+Per la comunicazione tra il pc è il blochettto lego abbiamo bisogno dei driver scaricati dal sito ufficiale di Lego: NXT Fantom Drivers v120.
 
 ## Progettazione
 
@@ -168,13 +169,6 @@ agli attributi e le relazioni degli oggetti in uso.
 
 Se il diagramma E-R viene modificato, sulla doc dovrà apparire l’ultima
 versione, mentre le vecchie saranno sui diari.
-
-### Design delle interfacce
-
-Descrizione delle interfacce interne ed esterne del sistema e
-dell’interfaccia utente. La progettazione delle interfacce è basata
-sulle informazioni ricavate durante la fase di analisi e realizzata
-tramite mockups.
 
 ### Design procedurale
 
