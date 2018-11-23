@@ -64,6 +64,9 @@
             </task>
             <task id="18" name="Implementazione" color="#ff33cc" meeting="false" start="2018-12-19" duration="8" complete="0" thirdDate="2018-11-02" thirdDate-constraint="0" expand="true">
                 <depend id="22" type="2" difference="0" hardness="Strong"/>
+                <task id="89" name="Preparazioni macchine" color="#8cb6ce" meeting="false" start="2018-12-19" duration="1" complete="0" thirdDate="2018-12-19" thirdDate-constraint="0" expand="true">
+                    <depend id="73" type="1" difference="0" hardness="Strong"/>
+                </task>
                 <task id="73" name="Sviluppo libreria RobotC" color="#8cb6ce" meeting="false" start="2018-12-19" duration="5" complete="0" thirdDate="2018-12-19" thirdDate-constraint="0" expand="true">
                     <depend id="72" type="2" difference="0" hardness="Strong"/>
                 </task>
