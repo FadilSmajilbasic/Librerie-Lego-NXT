@@ -134,7 +134,7 @@ in questo capitolo.
 ### Analisi dei mezzi
 
 Per la realizzazione della libreria nel linguaggio RobotC useremo l'IDE di RobotC (v4.56) con la licenza fornita dalla scuola.
-Invece per la realizzazione della libreria nel linguaggio Java useremo l'IDE NetBeans (v8.2).
+Invece per la realizzazione della libreria nel linguaggio Java useremo l'IDE NetBeans (v8.2). Per poter sviluppare la libreria in Java necessitiamo del firmware di leJos <version> e della relativa libreria "leJos 0.9.1-beta"
 Il prodotto verrà utilizzato dagli sviluppatori per programmare i loro algoritmi.
 La nostra soluzione verrà svulippata e testata utilizzando un Lego NXT ma dovrà funzionare anche sui Lego EV3.
 
