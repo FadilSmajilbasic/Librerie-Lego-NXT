@@ -52,7 +52,7 @@
 ### Informazioni sul progetto
 
   Il progetto sarà gestito e realizzato dall’allievo Luca Di Bello e Fadil Smajlbasic (studenti di informatica all’Arti e Mestieri di Trevano) sotto la supervisione del professor Luca Muggiasca, Adriano Barchi, Francesco Mussi e dalla professoressa Elisa Nannini.
-  La realizzazione del progetto prenderà piede il 16 novembre 2018 (16/11/18) e dovrà essere consegnato entro il <INSERIRE DATA DI CONSEGNA>
+  La realizzazione del progetto prenderà piede il 16 novembre 2018 (16/11/18) e dovrà essere consegnato entro il 25.01.19
 
 
 ### Abstract
@@ -78,43 +78,44 @@ Gli alunni che utilizzano i robot Lego non hanno mai programmato i blocchetti in
   Per usufruire semplificazioni del codice che offre il nostro prodotto bisogna soltanto importare la libreria (indipendentemente dal linguaggio). Essa conterrà degli oggetti, tramite i quali sarà possibile accedere a delle funzioni prefabbricate. Questo perchè l'obbiettivo del nostro lavoro è di creare un prodotto plug-and-play, il quale non necessita molte conoscenze di programmazione per essere utilizzato. L'utente quindi dovrà interagire minimamente con il codice, l'unica cosa che dovrà fare è creare un algoritmo utilizzando le funzioni già scritte all'interno della libreria, quindi non fa altro che fare un collage di funzioni al fine di raggiungere un algoritmo che svolge un azione desiderata.
   Entrambe le librerie saranno in grado di fare le stesse determinate cose, l'unica differenza tra di loro sono le prestazioni: Java essendo un linguaggio interpretato sarà molto più lento rispetto al linguaggio RobotC.
 
-  <b style="color:red">DA FARE LA SPECIFICA DEI REQUISITI, DA FARE IN 2</b>
-
   |ID  |REQ-001                                         |
   |----|------------------------------------------------|
-  |**Nome**    |Creazione interfaccia |
+  |**Nome**    |Librerie in Java e RobotC|
   |**Priorità**|1                     |
   |**Versione**|1.0                   |
-  |**Note**    |Si necessitano i permessi di root / Dipende dal requisito REQ-001 (Creazione DB)|
   |            |**Sotto requisiti**|
-  |**001**      | Si necessita una maschera di login|
-  |**002**      | Si dovranno poter immettere nuovi allievi|
-  |**003**      | Dovrà essere possibile la ricerca di allievi|
+  |**001**      | Classe per ogni sensore ed attuatore|
+  |**002**      | Codice ben commentato (Inglese o Italiano)|
 
-  
+  |ID  |REQ-002                                         |
+  |----|------------------------------------------------|
+  |**Nome**    |Guide d'utilizzo |
+  |**Priorità**|1                     |
+  |**Versione**|1.0                   |
+  |**Note**    | Da consegnare alla fine del progetto in allegato alla documentazione|
+  |            |**Sotto requisiti**|
+  |**001**      | Guida all'istallazione dei firmware sul blocchetto|
+  |**002**      | Guida che istruisce l'utente all'utilizzo del blocchetto|
 
-**Spiegazione elementi tabella dei requisiti:**
+  |ID  |REQ-003                                         |
+  |----|------------------------------------------------|
+  |**Nome**    | Verifica funzionamento sensori e attuatori |
+  |**Priorità**|1                     |
+  |**Versione**|1.0                   |
+  |            |**Sotto requisiti**|
+  |**001**      | Controllare che tutti i sensori ed attuatori funzionino correttamente|
+  |**002**      | Controllare che ci siano 7 cavi per collegare i sensori/attuatori al blocchetto|
 
-**ID**: identificativo univoco del requisito
-
-**Nome**: breve descrizione del requisito
-
-**Priorità**: indica l’importanza di un requisito nell’insieme del
-progetto, definita assieme al committente. Ad esempio poter disporre di
-report con colonne di colori diversi ha priorità minore rispetto al
-fatto di avere un database con gli elementi al suo interno. Solitamente
-si definiscono al massimo di 2-3 livelli di priorità.
-
-**Versione**: indica la versione del requisito. Ogni modifica del
-requisito avrà una versione aggiornata.
-
-Sulla documentazione apparirà solamente l’ultima versione, mentre le
-vecchie dovranno essere inserite nei diari.
-
-**Note**: eventuali osservazioni importanti o riferimenti ad altri
-requisiti.
-
-**Sotto requisiti**: elementi che compongono il requisito.
+  |ID  |REQ-004                                        |
+  |----|------------------------------------------------|
+  |**Nome**    | Combinazioni di componenti |
+  |**Priorità**|1                     |
+  |**Versione**|1.0                   |
+  |            |**Sotto requisiti**|
+  |**001**      | Line Follower (standard e proporzionale)|
+  |**002**      | Allineamento ad una riga |
+  |**003**      | Wall Follower |
+  |**004**      | Segway (equilibrio su due ruote) |
 
 ### Pianificazione
 
@@ -123,7 +124,7 @@ requisiti.
 ### Analisi dei mezzi
 
 Per la realizzazione della libreria nel linguaggio RobotC useremo l'IDE di RobotC (v4.56) con la licenza fornita dalla scuola.
-Invece per la realizzazione della libreria nel linguaggio Java useremo l'IDE NetBeans (v8.2). Per poter sviluppare la libreria in Java necessitiamo del firmware di leJos <version> e della relativa libreria "leJos 0.9.1-beta"
+Invece per la realizzazione della libreria nel linguaggio Java useremo l'IDE NetBeans (v8.2). Per poter sviluppare la libreria in Java necessitiamo della libreria "leJos 0.9.1-beta-3" per far comunicare in modo ottimale il codice con il blocchetto.
 Il prodotto verrà utilizzato dagli sviluppatori per programmare i loro algoritmi.
 La nostra soluzione verrà svulippata e testata utilizzando un Lego NXT ma dovrà funzionare anche sui Lego EV3.
 Per la comunicazione tra il pc è il blochettto lego abbiamo bisogno dei driver scaricati dal sito ufficiale di Lego: NXT Fantom Drivers v120.
