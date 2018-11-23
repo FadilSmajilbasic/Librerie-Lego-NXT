@@ -13,4 +13,5 @@ Il gantt preventivo è finito e inserito nella documentazione. Abbiamo fatto le 
 
 
 #### Programma di massima per la prossima giornata di lavoro
-Preparare l'ambiente di lavoro
+Preparare l'ambiente di lavoro RobotC e java.
+Trovare delle batterie per gli NXT
