@@ -134,8 +134,10 @@ in questo capitolo.
 ### Analisi dei mezzi
 
 Per la realizzazione della libreria nel linguaggio RobotC useremo l'IDE di RobotC (v4.56) con la licenza fornita dalla scuola.
-Per la realizzazione della libreria nel linguaggio Java useremo l'IDE NetBeans (v8.2).
-Il prodotto
+Invece per la realizzazione della libreria nel linguaggio Java useremo l'IDE NetBeans (v8.2).
+Il prodotto verrà utilizzato dagli sviluppatori per programmare i loro algoritmi.
+
+
 
 Elencare e *descrivere* i mezzi disponibili per la realizzazione del
 progetto. Ricordarsi di sempre descrivere nel dettaglio le versioni e il
