@@ -129,6 +129,31 @@ Il prodotto verrà utilizzato dagli sviluppatori per programmare i loro algoritm
 La nostra soluzione verrà svulippata e testata utilizzando un Lego NXT ma dovrà funzionare anche sui Lego EV3.
 Per la comunicazione tra il pc è il blochettto lego abbiamo bisogno dei driver scaricati dal sito ufficiale di Lego: NXT Fantom Drivers v120.
 
+Hardware utilizzato per lo sviluppo:
+
+<ol>
+  <li>
+    Specifiche computer di Luca:
+    <ul>
+      Portatile Asus gl702vm:
+      <li>CPU: I7-7700HQ</li>
+      <li>GPU: Nvidia GTX 1060 6GB</li>
+      <li>RAM: 16GB</li>
+      <li>OS: Windows 10 Home 64 bit</li>
+    </ul>
+  </li>
+  <li>
+  Specifiche computer di Fadil:
+  <ul>
+    Portatile Asus gl502vs:
+    <li>CPU: I7-7700HQ</li>
+    <li>GPU: Nvidia GTX 1070</li>
+    <li>RAM: 16GB</li>
+    <li>OS: Windows 10 Home 64 bit</li>
+  </ul>
+  </li>
+</ol>
+
 ## Progettazione
 
 Questo capitolo descrive esaustivamente come deve essere realizzato il
