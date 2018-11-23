@@ -78,7 +78,7 @@ Gli alunni che utilizzano i robot Lego non hanno mai programmato i blocchetti in
   Per usufruire semplificazioni del codice che offre il nostro prodotto bisogna soltanto importare la libreria (indipendentemente dal linguaggio). Essa conterrà degli oggetti, tramite i quali sarà possibile accedere a delle funzioni prefabbricate. Questo perchè l'obbiettivo del nostro lavoro è di creare un prodotto plug-and-play, il quale non necessita molte conoscenze di programmazione per essere utilizzato. L'utente quindi dovrà interagire minimamente con il codice, l'unica cosa che dovrà fare è creare un algoritmo utilizzando le funzioni già scritte all'interno della libreria, quindi non fa altro che fare un collage di funzioni al fine di raggiungere un algoritmo che svolge un azione desiderata.
   Entrambe le librerie saranno in grado di fare le stesse determinate cose, l'unica differenza tra di loro sono le prestazioni: Java essendo un linguaggio interpretato sarà molto più lento rispetto al linguaggio RobotC.
 
-  <b style="color:red">DA FARE LA SPECIFICA DEI REQUISITI</b>
+  <b style="color:red">DA FARE LA SPECIFICA DEI REQUISITI, DA FARE IN 2</b>
 
   |ID  |REQ-001                                         |
   |----|------------------------------------------------|
