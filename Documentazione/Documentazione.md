@@ -117,29 +117,6 @@ Gli alunni che utilizzano i robot Lego non hanno mai programmato i blocchetti in
   |**003**      | Wall Follower |
   |**004**      | Segway (equilibrio su due ruote) |
 
-**Spiegazione elementi tabella dei requisiti:**
-
-**ID**: identificativo univoco del requisito
-
-**Nome**: breve descrizione del requisito
-
-**Priorità**: indica l’importanza di un requisito nell’insieme del
-progetto, definita assieme al committente. Ad esempio poter disporre di
-report con colonne di colori diversi ha priorità minore rispetto al
-fatto di avere un database con gli elementi al suo interno. Solitamente
-si definiscono al massimo di 2-3 livelli di priorità.
-
-**Versione**: indica la versione del requisito. Ogni modifica del
-requisito avrà una versione aggiornata.
-
-Sulla documentazione apparirà solamente l’ultima versione, mentre le
-vecchie dovranno essere inserite nei diari.
-
-**Note**: eventuali osservazioni importanti o riferimenti ad altri
-requisiti.
-
-**Sotto requisiti**: elementi che compongono il requisito.
-
 ### Pianificazione
 
 ![gantt](preventivo.png)
