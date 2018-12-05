@@ -9,8 +9,8 @@ Il gantt preventivo è finito e inserito nella documentazione. Abbiamo fatto le 
 <!-- #### Problemi riscontrati e soluzioni adottate -->
 
 ---
-<!-- #### Punto della situazione rispetto alla pianificazione -->
-
+#### Punto della situazione rispetto alla pianificazione
+Siamo al passo con il gantt preventivo.
 
 #### Programma di massima per la prossima giornata di lavoro
 Preparare l'ambiente di lavoro RobotC e java.

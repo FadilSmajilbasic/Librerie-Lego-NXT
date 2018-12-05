@@ -22,8 +22,8 @@ Per risolvere questo problema bisogna:
 Eseguendo l'ultimo passagio, il programma robotC riconosce il brick e può scaricare e installare il firmware di RobotC sul brick 
 
 ---
-<!-- #### Punto della situazione rispetto alla pianificazione -->
-
+#### Punto della situazione rispetto alla pianificazione
+Siamo al passo con il gantt preventivo.
 
 #### Programma di massima per la prossima giornata di lavoro
 Controllare la funzionalità dei motori e sensori

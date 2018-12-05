@@ -20,7 +20,7 @@ Abbiamo adottato un altra soluzione:
 Usiamo la repo principale.
 
 ---
-<!-- ####Punto della situazione rispetto alla pianificazione -->
-
+#### Punto della situazione rispetto alla pianificazione
+Siamo al passo con il gantt preventivo.
 
 <!-- ####Programma di massima per la prossima giornata di lavoro -->
