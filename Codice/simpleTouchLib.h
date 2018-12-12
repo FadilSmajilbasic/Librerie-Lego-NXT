@@ -1,6 +1,3 @@
-bool isButtonPressed(short port){
-    if(SensorValue(port) == 1){
-    	return true;
-    }
-    return false;
+bool buttonPressed(short button){
+    short nNxtButtonPressed()
 }

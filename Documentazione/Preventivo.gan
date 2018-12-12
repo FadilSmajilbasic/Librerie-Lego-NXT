@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project name="Preventivo" company="SAMT" webLink="http://" view-date="2018-11-08" view-index="0" gantt-divider-location="496" resource-divider-location="300" version="2.8.9" locale="en_GB">
     <description/>
     <view zooming-state="default:2" id="gantt-chart">
-        <field id="tpd3" name="Name" width="233" order="0"/>
-        <field id="tpd4" name="Begin date" width="130" order="1"/>
+        <field id="tpd3" name="Name" width="291" order="0"/>
+        <field id="tpd4" name="Begin date" width="72" order="1"/>
         <field id="tpd5" name="End date" width="130" order="2"/>
         <timeline><![CDATA[19]]></timeline>
         <option id="color.recent"><![CDATA[#00ff33 #ff33cc #0099ff #00ffff #000000]]></option>
@@ -35,7 +35,7 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Libreria NXT" color="#000000" shape="1,0,0,0,1,0,0,0,1,0,0,0,1,1,1,1" meeting="false" start="2018-11-14" duration="22" complete="0" thirdDate="2018-11-21" thirdDate-constraint="0" expand="true">
+        <task id="0" name="Libreria NXT" color="#000000" shape="1,0,0,0,1,0,0,0,1,0,0,0,1,1,1,1" meeting="false" start="2018-11-14" duration="23" complete="0" thirdDate="2018-11-21" thirdDate-constraint="0" expand="true">
             <task id="9" name="Introduzione e setup" color="#8cb6ce" meeting="false" start="2018-11-14" duration="1" complete="0" thirdDate="2018-11-02" thirdDate-constraint="0" expand="true">
                 <depend id="19" type="2" difference="0" hardness="Strong"/>
             </task>
@@ -62,20 +62,33 @@
                 </task>
                 <task id="71" name="Design dei dati e database" color="#8cb6ce" meeting="false" start="2018-12-19" duration="2" complete="0" thirdDate="2018-12-05" thirdDate-constraint="0" expand="true"/>
             </task>
-            <task id="18" name="Implementazione" color="#ff33cc" meeting="false" start="2018-12-26" duration="7" complete="0" thirdDate="2018-11-02" thirdDate-constraint="0" expand="true">
-                <depend id="22" type="2" difference="0" hardness="Strong"/>
+            <task id="18" name="Implementazione" color="#ff33cc" meeting="false" start="2018-12-26" duration="8" complete="0" thirdDate="2018-11-02" thirdDate-constraint="0" expand="true">
                 <task id="89" name="Preparazioni macchine" color="#8cb6ce" meeting="false" start="2018-12-26" duration="1" complete="0" thirdDate="2018-12-19" thirdDate-constraint="0" expand="true">
                     <depend id="73" type="1" difference="0" hardness="Strong"/>
                 </task>
-                <task id="73" name="Sviluppo libreria RobotC" color="#8cb6ce" meeting="false" start="2018-12-26" duration="4" complete="0" thirdDate="2018-12-19" thirdDate-constraint="0" expand="true">
-                    <depend id="72" type="2" difference="0" hardness="Strong"/>
+                <task id="73" name="Sviluppo libreria RobotC" color="#8cb6ce" meeting="false" start="2018-12-26" duration="5" complete="0" thirdDate="2018-12-19" thirdDate-constraint="0" expand="true">
+                    <depend id="22" type="2" difference="0" hardness="Strong"/>
+                    <depend id="118" type="2" difference="0" hardness="Strong"/>
+                    <task id="95" name="Motori" color="#8cb6ce" meeting="false" start="2018-12-26" duration="1" complete="0" thirdDate="2018-12-26" thirdDate-constraint="0" expand="true">
+                        <depend id="98" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="98" name="Sensore ad ultrasuoni" color="#8cb6ce" meeting="false" start="2018-12-28" duration="1" complete="0" thirdDate="2018-12-26" thirdDate-constraint="0" expand="true">
+                        <depend id="103" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="103" name="Microfono" color="#8cb6ce" meeting="false" start="2019-01-02" duration="1" complete="0" thirdDate="2018-12-26" thirdDate-constraint="0" expand="true">
+                        <depend id="105" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="105" name="Touch" color="#8cb6ce" meeting="false" start="2019-01-04" duration="1" complete="0" thirdDate="2018-12-26" thirdDate-constraint="0" expand="true">
+                        <depend id="107" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="107" name="Luce" color="#8cb6ce" meeting="false" start="2019-01-09" duration="1" complete="0" thirdDate="2018-12-26" thirdDate-constraint="0" expand="true"/>
                 </task>
-                <task id="72" name="Sviluppo libreria Java" color="#8cb6ce" meeting="false" start="2019-01-09" duration="3" complete="0" thirdDate="2018-12-19" thirdDate-constraint="0" expand="true"/>
+                <task id="118" name="RobotExplorer" color="#8cb6ce" meeting="false" start="2019-01-11" duration="3" complete="0" thirdDate="2018-12-26" thirdDate-constraint="0" expand="true"/>
             </task>
-            <task id="22" name="Test" color="#00ff33" meeting="false" start="2019-01-18" duration="3" complete="0" thirdDate="2018-11-02" thirdDate-constraint="0" expand="true">
-                <task id="86" name="Test Libreria RobotC" color="#8cb6ce" meeting="false" start="2019-01-18" duration="3" complete="0" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true"/>
+            <task id="22" name="Test" color="#00ff33" meeting="false" start="2019-01-23" duration="3" complete="0" thirdDate="2018-11-02" thirdDate-constraint="0" expand="true">
+                <task id="86" name="Test Libreria RobotC" color="#8cb6ce" meeting="false" start="2019-01-23" duration="3" complete="0" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true"/>
             </task>
-            <task id="7" name="Documentazione" color="#8cb6ce" meeting="false" start="2018-11-14" duration="22" complete="0" thirdDate="2018-11-02" thirdDate-constraint="0" expand="true"/>
+            <task id="7" name="Documentazione" color="#8cb6ce" meeting="false" start="2018-11-14" duration="23" complete="0" thirdDate="2018-11-02" thirdDate-constraint="0" expand="true"/>
         </task>
     </tasks>
     <resources/>
