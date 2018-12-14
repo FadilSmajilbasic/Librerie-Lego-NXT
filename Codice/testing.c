@@ -8,8 +8,8 @@
 
 task main()
 {
-			goMotor(bigMotor);
-			waitTouch(touchSensor,CLICKED);
+	goMotor(bigMotor);
+	waitTouch(touchSensor,CLICKED);
 
 			/* PROVA TOUCH SENSOR
 			if(isPressed(touchSensor)){
