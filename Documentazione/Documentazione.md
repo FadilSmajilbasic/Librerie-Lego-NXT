@@ -119,7 +119,7 @@ Gli alunni che utilizzano i robot Lego non hanno mai programmato i blocchetti in
 
 ### Pianificazione
 
-![gantt](/img/preventivo.png)
+![gantt](img/preventivo.png)
 
 ### Analisi dei mezzi
 
@@ -156,20 +156,11 @@ Hardware utilizzato per lo sviluppo:
 
 ## Progettazione
 
-
-### Design dell’architettura del sistema
-
-
-
 ### Design dei dati e database
 
-Descrizione delle strutture di dati utilizzate dal programma in base
-agli attributi e le relazioni degli oggetti in uso.
+Nella figura sotto si può vedre il diagramam UML delle librerie e dei metodi di esse
 
-
-### Design procedurale
-
-![Diagramma delle classi](/img/Classes.png)
+![Diagramma delle classi](img/Classes.png)
 
 ## Implementazione
 
