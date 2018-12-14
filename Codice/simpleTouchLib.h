@@ -1,4 +1,4 @@
-bool isPressed(short port){
+bool isPressed(byte port){
 	bool preState = 0;
 
 	while(true){
