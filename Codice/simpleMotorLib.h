@@ -1,13 +1,30 @@
-void goMotor(short motorId, byte power,float seconds)
+#if 0
+/// Copyright (c) Luca Di Bello & Fadil Smajilbasic. All rights reserved.
+///
+/// <module name="SimpleMotorLib.h" />
+///
+/// <summary>
+///     This module contains all the functions about the motor actuator.
+/// </summary>
+///
+/// <remarks>
+///     Environment: RobotC for Lego Mindstorms NXT.
+/// </remarks>
+#endif
+
+#include "SimpleWaitLib.h"
+
+//Funziona
+void goMotor(short port, byte power,float seconds)
 {
-	motor[motorId] = power;
-	wait1Msec(seconds*1000);
-	motor[motorId] = 0;
+	motor[port] = power;
+	wait(seconds);
 }
 
-void goMotor(short motorId, byte power = 127)
+//Funziona
+void goMotor(short port, byte power = 127)
 {
-	motor[motorId] = power;
+	motor[port] = power;
 }
 
 //Not working (WIP)
@@ -18,7 +35,6 @@ void goMotor(short motorId, float degrees)
 	motor[motorId] = 50;
 	nMotorEncoder[motorId] = 0;
 
-	//writeDebugStreamLine(text);
 
 	while (abs(nMotorEncoder[motorId]) < rCount)
 	{
@@ -31,7 +47,13 @@ void goMotor(short motorId, float degrees)
 	wait10Msec(100);
 }
 
-void stopMotor(short motorId)
+//Funziona -> se mode = 1: instant, se 0: friction (spegne i motori e si ferma da solo
+void stopMotor(short motorId,short mode)
 {
-	motor[motorId] = 0;
+	if(mode == 1){
+		motor[motorId] = 0;
+	}
+	else{
+
+	}
 }
