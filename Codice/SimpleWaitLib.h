@@ -14,30 +14,73 @@
 #include "SimpleTouchLib.h"
 #include "SimpleUltrasonicLib.h"
 
-typedef enumWord { PRESSED, RELEASED, CLICKED} TouchModes;
-typedef enumWord { LESS, GREATER} UltrasonicModes;
-
 void wait(float time){
 	wait1Msec(time * 1000);
 }
 
-void waitDistance(short port,int distance,UltrasonicModes mode){
-	//TODO: FINIRE WAIT PER LA DISTANZA
-	if(mode == LESS){
-
-	}
-	else if(mode == GREATER){
-
+void waitNxtButtons(int button){
+	/*
+		0 = Gray Rectangle button.
+		1 = Right Arrow button.
+		2 = Left Arrow button.
+		3 = Orange Square button
+	*/
+	while(true){
+		if(nNxtButtonPressed == button){break;}
 	}
 }
 
-void waitTouch(short port,TouchModes mode){
-	writeDebugStreamLine("int x is: %d", SensorValue(port));
+void waitDistance(short port,int distance,short mode){
+	//MODE == 0 -> LESS
+	//MODE == 1 -> GREATER
 
+	//TODO: FINIRE WAIT PER LA DISTANZA
+
+	if(mode == 0){
+		while(true){
+			float curr_distance = SensorValue(port);
+			if(curr_distance < distance){break;}
+		}
+	}
+	else if(mode == 1){
+		while(true){
+			float curr_distance = SensorValue(port);
+			if(curr_distance > distance){break;}
+		}
+	}
+}
+
+void waitMicrophone(short port,int db,short mode){
+	//MODE == 0 -> LESS
+	//MODE == 1 -> GREATER
+	if(db > 100){db = 100;}
+	//TODO: FINIRE WAIT PER LA DISTANZA
+
+	if(mode == 0){
+		while(true){
+			float curr_db = SensorValue(port);
+			writeDebugStreamLine("Distance is: %d", curr_db);
+			if(curr_db < db){break;}
+		}
+	}
+	else if(mode == 1){
+		while(true){
+			float curr_db = SensorValue(port);
+			writeDebugStreamLine("Distance is: %d", curr_db);
+			if(curr_db > db){break;}
+		}
+	}
+}
+
+void waitTouch(short port,short mode){
+	//writeDebugStreamLine("int x is: %d", SensorValue(port));
+	//MODE == 0 -> PRESSED
+	//MODE == 1 -> RELEASED
+	//MODE == 2 -> CLICKED
 	bool preState = false;
 	bool currentState = false;
 
-	if(mode == PRESSED){
+	if(mode == 0){
 		while(true){
 			currentState = (bool) SensorValue(port);
 
@@ -48,7 +91,7 @@ void waitTouch(short port,TouchModes mode){
 			preState = currentState;
 		}
 	}
-	else if(mode == RELEASED){
+	else if(mode == 1){
 		while(true){
 			currentState = (bool) SensorValue(port);
 
@@ -59,7 +102,7 @@ void waitTouch(short port,TouchModes mode){
 			preState = currentState;
 		}
 	}
-	else if(mode == CLICKED){
+	else if(mode == 2){
 		bool wasPressed = false;
 		bool wasReleased = false;
 
