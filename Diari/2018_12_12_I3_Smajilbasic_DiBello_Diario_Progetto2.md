@@ -1,4 +1,4 @@
-# PROGETTO 2 | Diario di lavoro - 1.12.2018
+# PROGETTO 2 | Diario di lavoro - 12.12.2018
 ##### Fadil Smajilbasic, Luca Di Bello
 ### Canobbio, [12.12.2018]
 
