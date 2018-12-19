@@ -145,9 +145,9 @@ Hardware utilizzato per lo sviluppo:
   <li>
   Specifiche computer di Fadil:
   <ul>
-    Portatile Asus gl502vs:
-    <li>CPU: I7-7700HQ</li>
-    <li>GPU: Nvidia GTX 1070</li>
+    Portatile HP Pavilion cs0800nz:
+    <li>CPU: I7-8550U</li>
+    <li>GPU: Intel UHD Graphics 620</li>
     <li>RAM: 16GB</li>
     <li>OS: Windows 10 Home 64 bit</li>
   </ul>
