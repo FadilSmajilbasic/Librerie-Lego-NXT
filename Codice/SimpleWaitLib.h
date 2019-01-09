@@ -11,8 +11,6 @@
 ///     Environment: RobotC for Lego Mindstorms NXT.
 /// </remarks>
 #endif
-#include "SimpleTouchLib.h"
-#include "SimpleUltrasonicLib.h"
 
 void wait(float time){
 	wait1Msec(time * 1000);
@@ -34,8 +32,6 @@ void waitDistance(short port,int distance,short mode){
 	//MODE == 0 -> LESS
 	//MODE == 1 -> GREATER
 
-	//TODO: FINIRE WAIT PER LA DISTANZA
-
 	if(mode == 0){
 		while(true){
 			float curr_distance = SensorValue(port);
@@ -54,22 +50,43 @@ void waitMicrophone(short port,int db,short mode){
 	//MODE == 0 -> LESS
 	//MODE == 1 -> GREATER
 	if(db > 100){db = 100;}
-	//TODO: FINIRE WAIT PER LA DISTANZA
 
 	if(mode == 0){
 		while(true){
 			float curr_db = SensorValue(port);
-			writeDebugStreamLine("Distance is: %d", curr_db);
+
 			if(curr_db < db){break;}
 		}
 	}
 	else if(mode == 1){
 		while(true){
 			float curr_db = SensorValue(port);
-			writeDebugStreamLine("Distance is: %d", curr_db);
+
 			if(curr_db > db){break;}
 		}
 	}
+}
+
+void waitLight(short port,int light_value ,short mode){
+	//MODE == 0 -> LESS
+	//MODE == 1 -> GREATER
+
+  if(mode == 0){
+  	while(true){
+  		writeDebugStreamLine("Less mode, current value: %d",SensorValue(port));
+  		if(SensorValue(port) < light_value){
+  			break;
+  		}
+  	}
+  }
+  else if(mode == 1){
+  	while(true){
+  	writeDebugStreamLine("Greater mode, current value: %d",SensorValue(port));
+  	if(SensorValue(port) > light_value){
+  			break;
+  		}
+  	}
+  }
 }
 
 void waitTouch(short port,short mode){
