@@ -15,40 +15,34 @@
 #include "SimpleWaitLib.h"
 
 //Funziona
-void goMotor(short port, byte power,float seconds)
+void goMotorSeconds(short port, float seconds , byte power = 127)
 {
 	motor[port] = power;
 	wait(seconds);
 }
 
 //Funziona
-void goMotor(short port, byte power = 127)
+void goMotorStandard(short port, byte power = 127)
 {
 	motor[port] = power;
 }
 
-//Not working (WIP)
-void goMotor(short motorId, float degrees)
+//Deve essere testato
+void goMotorDegrees(short motorId, float degrees, byte power = 127)
 {
-	int rCount = degrees;
+	setMotorTarget(motorId, degrees, power);
+	waitUntilMotorStop(motorId);
+}
 
-	motor[motorId] = 50;
-	nMotorEncoder[motorId] = 0;
-
-
-	while (abs(nMotorEncoder[motorId]) < rCount)
-	{
-		nxtDisplayTextLine(1, "Distance=%d", nMotorEncoder[motorId]);
-
-		string text = "";
-		sprintf(text, "motor: %d" ,nMotorEncoder[motorId]);
+//Deve essere testato
+void goMotorRotations(short motorId, int giri, byte power = 127){
+	for(int i = 0; i < giri; i++){
+		goMotorDegrees(motorId,360,127);
 	}
-	motor[motorId] = 0;
-	wait10Msec(100);
 }
 
 //Funziona -> se mode = 1: instant, se 0: friction (spegne i motori e si ferma da solo
-void stopMotor(short motorId,short mode)
+void stopMotor(short motorId, short mode = 1)
 {
 	if(mode == 1){
 		motor[motorId] = 0;
