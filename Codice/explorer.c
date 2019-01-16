@@ -10,17 +10,63 @@
 
 task main()
 {
-	int SPEED = 20;
+	int SPEED = 127;
+	int ROTATION_DEGREES = 350;
+	int MAX_DISTANCE = 30;
+	int MIN_DISTANCE = 10;
 	while(true){
-	 	if(SensorValue(touchLeft)){
-			//Va a destra
+	 	if(SensorValue(distance) <= MAX_DISTANCE){
+	 		bool right = (((rand() % (10-0)) + 0) % 2 == 0);
+
+	 		//Ferma i motori
 			stopMotor(motorLeft);
-			goMotorDegrees(motorRight,480,80);
+			stopMotor(motorRight);
+
+			if(SensorValue(distance) <= MIN_DISTANCE){
+				goMotorStandard(motorRight,-SPEED);
+		 		goMotorStandard(motorLeft,-SPEED);
+
+		 		wait(1);
+			}
+
+			if(right){
+					//Va a destra
+				goMotorDegrees(motorLeft,ROTATION_DEGREES,SPEED);
+			}
+			else{
+				goMotorDegrees(motorRight,ROTATION_DEGREES,SPEED);
+			}
+	 	}
+
+		if(SensorValue(touchLeft)){
+			//Va indietro
+	 		goMotorStandard(motorRight,-SPEED);
+	 		goMotorStandard(motorLeft,-SPEED);
+
+	 		wait(1);
+
+	 		//Ferma i motori
+			stopMotor(motorLeft);
+			stopMotor(motorRight);
+
+			//Va a destra
+			goMotorDegrees(motorLeft,ROTATION_DEGREES,SPEED);
 
 		}
 		else if(SensorValue(touchRight)){
-			//Va a sinistra
-		}
+			//Va indietro
+	 		goMotorStandard(motorRight,-SPEED);
+	 		goMotorStandard(motorLeft,-SPEED);
+
+	 		wait(1);
+
+	 		//Ferma i motori
+			stopMotor(motorLeft);
+			stopMotor(motorRight);
+
+			//Va a destra
+			goMotorDegrees(motorRight,ROTATION_DEGREES,SPEED);
+	 	}
 		else if(SensorValue(touchRight) && SensorValue(touchLeft)){
 			//Va indietro e gira a random tra destra e sinistra di 90 gradi
 		}
