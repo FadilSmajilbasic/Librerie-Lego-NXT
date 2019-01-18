@@ -213,30 +213,18 @@ ripetibile alle stesse condizioni.
 |---------------|--------------------------------------|
 |**Nome**       |Test sensori e attuatori |
 |**Riferimento**|REQ-003                               |
-<<<<<<< HEAD
 |**Descrizione**|Controllare i valori letti dai sensori ed attuatori per garantirne il corretto funzionamento |
 |**Procedura**     | - Accendere il blocchetto NXT <br> - Navigare tramite i relativi tasti nel menu principale e selezionare l'opzione *View* <br> - Controllare il corretto funzionamento di ogni sensore ed attuatore |
 |**Risultati attesi** | Valori validi e sensati da tutti i sensori ed attuatori. La velocità ed i tick dei motori devono essere realistici.  |
-=======
-|**Descrizione**|Controllare i sensori letti dai sensori tramite il View del robot |
-|**Prerequisiti**| Avere tutti i sensori |
-|**Procedura**     | - Accendere il robot <br> - Navigrare con i tasti il menu e selezionare la opzione *View* <br> - Controllare ogni sensore e attuatore |
-|**Risultati attesi** |Valori validi e sensati da tutti i sensori <br> La velocità e tick dei motori segnati in modo giusto  |
-
->>>>>>> 1a449cc1886d55e4ac448fdebe0ea54a95435dd7
 
 ### Risultati test
 
 | Nome    | ID    | Risultato |
 |-----    |----   |-----------|
-<<<<<<< HEAD
+|Test metodi libreria SimpleWaitLib -> metodo wait(float time)    | TC-001 |passato    |
 |Test sensori e attuatori    |TC-002 | passato    |
-=======
-|Test metodi libreria SimpleWaitLib -> metodo wait(float time)    |TC-001 |passato    |
-|Test sensori e attuatori    |TC-002 |passato    |
 
 
->>>>>>> 1a449cc1886d55e4ac448fdebe0ea54a95435dd7
 
 ### Mancanze/limitazioni conosciute
 
