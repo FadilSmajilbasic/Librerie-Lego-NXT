@@ -200,6 +200,7 @@ fungono da garanzia di qualità del prodotto. Ogni test deve essere
 ripetibile alle stesse condizioni.
 
 
+<<<<<<< HEAD
 |Test Case      | TC-001                               |
 |---------------|--------------------------------------|
 |**Nome**       |Test metodo wait della libreria SimpleWaitLib|
@@ -210,6 +211,10 @@ ripetibile alle stesse condizioni.
 |**Risultati attesi** | Il motore va a massima velocità per 5 secondi dopodichè si ferma ed aspetta per 5 secondi prima di arrestare il programma.|
 
 |Test Case      | TC-002                            |
+=======
+
+|Test Case      | TC-001                           |
+>>>>>>> ad6617155f1d3f4055f9656b3d83169a1f7fe7bb
 |---------------|--------------------------------------|
 |**Nome**       |Test sensori e attuatori |
 |**Riferimento**|REQ-003                               |
@@ -217,12 +222,34 @@ ripetibile alle stesse condizioni.
 |**Procedura**     | - Accendere il blocchetto NXT <br> - Navigare tramite i relativi tasti nel menu principale e selezionare l'opzione *View* <br> - Controllare il corretto funzionamento di ogni sensore ed attuatore |
 |**Risultati attesi** | Valori validi e sensati da tutti i sensori ed attuatori. La velocità ed i tick dei motori devono essere realistici.  |
 
+|Test Case      | TC-002                        |
+|---------------|--------------------------------------|
+|**Nome**       |Test metodi libreria SimpleWaitLib: metodo *wait(float time)*|
+|**Riferimento**| REQ-001                          |
+|**Descrizione**|Verificare la giusta funzionalità del metodo *wait(float time)* della libreria SimpleWaitLib |
+|**Prerequisiti**| Finire di scrivere la libreria |
+|**Procedura**     | - Creare un file di test <br> - Inserire il riferimento alla libreria con `#include "SimpleWaitLib.h"` <br> - eseguire il seguente pezzo di codice: <br> `goMotor(127, motorA);`<br> `wait(5);` <br> `stopMotor(motorA);` <br> `wait(5);` |
+|**Risultati attesi** | Il motore va a massima potenza per 5 secondi dopodichè si ferma per 5 secondi |
+
+#### template test case:
+|Test Case      | TC-003                             |
+|---------------|--------------------------------------|
+|**Nome**       |`*NAME*` |
+|**Riferimento**| REQ-001                          |
+|**Descrizione**|Verificare la giusta funzionalità del metodo methodName della libreria SimpleWaitLib |
+|**Prerequisiti**| Finire di scrivere la libreria |
+|**Procedura**   | - Creare un file di test <br> - Inserire il riferimento alla libreria con `#include "SimpleWaitLib.h"` <br> - eseguire il seguente pezzo di codice: `*CODE*` |
+|**Risultati attesi** |  |
+
+
+
+
 ### Risultati test
 
 | Nome    | ID    | Risultato |
 |-----    |----   |-----------|
-|Test metodi libreria SimpleWaitLib -> metodo wait(float time)    | TC-001 |passato    |
-|Test sensori e attuatori    |TC-002 | passato    |
+|Test metodi libreria SimpleWaitLib -> metodo wait(float time)    |TC-002 |passato    |
+|Test sensori e attuatori    |TC-001 |passato    |
 
 ### Mancanze/limitazioni conosciute
 
