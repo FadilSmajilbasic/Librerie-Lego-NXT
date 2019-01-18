@@ -1,2 +1,2 @@
-# Librerie-Lego-NTX
-Sistema didattico per Lego EV3/NTX con libreria e documentazione
+# Librerie-Lego-NXT
+Sistema didattico per Lego EV3/NXT con libreria e documentazione
