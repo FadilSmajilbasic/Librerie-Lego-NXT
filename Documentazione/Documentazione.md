@@ -73,7 +73,6 @@
 
   |ID  |REQ-001                                         |
   |----|------------------------------------------------|
-<<<<<<< HEAD
   |**Nome**    |Libreria in RobotC|
   |**Priorità**|1                     |
   |**Versione**|1.0                   |
@@ -81,14 +80,6 @@
   |**001**      | Classe per l'utilizzo semplificato dei motori|
   |**002**      | Classe che implementa tutti i tipi di wait presenti in Lego MindStorms|
   |**003**      | Codice ben commentato (Inglese o Italiano)|
-=======
-  |**Nome**     |Libreria scritta in RobotC|
-  |**Priorità** |1                     |
-  |**Versione** |1.0                   |
-  |             |**Sotto requisiti**|
-  |**001**      | Classe per ogni sensore ed attuatore|
-  |**002**      | Codice ben commentato (Inglese o Italiano)|
->>>>>>> efd99d0a9312018d01ad57ee153dbc9878e99ee4
 
   |ID  |REQ-002                                         |
   |----|------------------------------------------------|
@@ -215,7 +206,7 @@ ripetibile alle stesse condizioni.
 
 |Test Case      | TC-001                               |
 |---------------|--------------------------------------|
-|**Nome**       |Test metodi libreria SimpleWaitLib|
+|**Nome**       |Test metodi libreria SimpleWaitLib -> |
 |**Riferimento**|                              |
 |**Descrizione**|Verificare la giusta funzionalità di tu |
 |**Prerequisiti**|Store on local PC: Profile\_1.2.001.xml (appendix n\_n) and Cards\_1.2.001.txt (appendix n\_n) |
