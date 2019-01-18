@@ -200,7 +200,6 @@ fungono da garanzia di qualità del prodotto. Ogni test deve essere
 ripetibile alle stesse condizioni.
 
 
-<<<<<<< HEAD
 |Test Case      | TC-001                               |
 |---------------|--------------------------------------|
 |**Nome**       |Test metodo wait della libreria SimpleWaitLib|
@@ -211,10 +210,6 @@ ripetibile alle stesse condizioni.
 |**Risultati attesi** | Il motore va a massima velocità per 5 secondi dopodichè si ferma ed aspetta per 5 secondi prima di arrestare il programma.|
 
 |Test Case      | TC-002                            |
-=======
-
-|Test Case      | TC-001                           |
->>>>>>> ad6617155f1d3f4055f9656b3d83169a1f7fe7bb
 |---------------|--------------------------------------|
 |**Nome**       |Test sensori e attuatori |
 |**Riferimento**|REQ-003                               |
