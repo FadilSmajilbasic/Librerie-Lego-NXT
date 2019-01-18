@@ -73,6 +73,7 @@
 
   |ID  |REQ-001                                         |
   |----|------------------------------------------------|
+<<<<<<< HEAD
   |**Nome**    |Libreria in RobotC|
   |**Priorità**|1                     |
   |**Versione**|1.0                   |
@@ -80,6 +81,14 @@
   |**001**      | Classe per l'utilizzo semplificato dei motori|
   |**002**      | Classe che implementa tutti i tipi di wait presenti in Lego MindStorms|
   |**003**      | Codice ben commentato (Inglese o Italiano)|
+=======
+  |**Nome**     |Libreria scritta in RobotC|
+  |**Priorità** |1                     |
+  |**Versione** |1.0                   |
+  |             |**Sotto requisiti**|
+  |**001**      | Classe per ogni sensore ed attuatore|
+  |**002**      | Codice ben commentato (Inglese o Italiano)|
+>>>>>>> efd99d0a9312018d01ad57ee153dbc9878e99ee4
 
   |ID  |REQ-002                                         |
   |----|------------------------------------------------|
@@ -98,7 +107,7 @@
   |**Versione**|1.0                   |
   |            |**Sotto requisiti**|
   |**001**      | Controllare che tutti i sensori ed attuatori funzionino correttamente|
-  |**002**      | Controllare che ci siano 7 cavi per collegare i sensori/attuatori al blocchetto|
+  |**002**      | Controllare che ci siano 6 cavi per collegare i sensori/attuatori al blocchetto|
 
   |ID  |REQ-004                                        |
   |----|------------------------------------------------|
@@ -206,30 +215,30 @@ ripetibile alle stesse condizioni.
 
 |Test Case      | TC-001                               |
 |---------------|--------------------------------------|
-|**Nome**       |Import a card, but not shown with the GUI |
-|**Riferimento**|REQ-012                               |
-|**Descrizione**|Import a card with KIC, KID and KIK keys with no obfuscation, but not shown with the GUI |
+|**Nome**       |Test metodi libreria SimpleWaitLib|
+|**Riferimento**|                              |
+|**Descrizione**|Verificare la giusta funzionalità di tu |
 |**Prerequisiti**|Store on local PC: Profile\_1.2.001.xml (appendix n\_n) and Cards\_1.2.001.txt (appendix n\_n) |
 |**Procedura**     | - Go to “Cards manager” menu, in main page click “Import Profiles” link, Select the “1.2.001.xml” file, Import the Profile - Go to “Cards manager” menu, in main page click “Import Cards” link, Select the “1.2.001.txt” file, Delete the cards, Select the “1.2.001.txt” file, Import the cards |
 |**Risultati attesi** |Keys visible in the DB (OtaCardKey) but not visible in the GUI (Card details) |
 
-|Test Case      | TC-001                               |
+|Test Case      | TC-002                            |
 |---------------|--------------------------------------|
-|**Nome**       |Import a card, but not shown with the GUI |
-|**Riferimento**|REQ-012                               |
-|**Descrizione**|Import a card with KIC, KID and KIK keys with no obfuscation, but not shown with the GUI |
-|**Prerequisiti**|Store on local PC: Profile\_1.2.001.xml (appendix n\_n) and Cards\_1.2.001.txt (appendix n\_n) |
-|**Procedura**     | - Go to “Cards manager” menu, in main page click “Import Profiles” link, Select the “1.2.001.xml” file, Import the Profile - Go to “Cards manager” menu, in main page click “Import Cards” link, Select the “1.2.001.txt” file, Delete the cards, Select the “1.2.001.txt” file, Import the cards |
-|**Risultati attesi** |Keys visible in the DB (OtaCardKey) but not visible in the GUI (Card details) |
+|**Nome**       |Test sensori e attuatori |
+|**Riferimento**|REQ-003                               |
+|**Descrizione**|Controllare i sensori letti dai sensori tramite il View del robot |
+|**Prerequisiti**| none |
+|**Procedura**     | - Accendere il robot <br> - Navigrare con i tasti il menu e selezionare la opzione *View* <br> - Controllare ogni sensore e attuatore |
+|**Risultati attesi** |Valori validi e sensati da tutti i sensori <br> La velocità e tick dei motori segnati in modo giusto  |
 
 
 ### Risultati test
 
-Tabella riassuntiva in cui si inseriscono i test riusciti e non del
-prodotto finale. Se un test non riesce e viene corretto l’errore, questo
-dovrà risultare nel documento finale come riuscito (la procedura della
-correzione apparirà nel diario), altrimenti dovrà essere descritto
-l’errore con eventuali ipotesi di correzione.
+| Nome    | ID    | Risultato |
+|-----    |----   |-----------|
+|Test sensori e attuatori    |TC-002 |passato    |
+
+
 
 ### Mancanze/limitazioni conosciute
 
