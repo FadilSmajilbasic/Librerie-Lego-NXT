@@ -206,19 +206,19 @@ ripetibile alle stesse condizioni.
 
 |Test Case      | TC-001                               |
 |---------------|--------------------------------------|
-|**Nome**       |Test metodi libreria SimpleWaitLib -> |
+|**Nome**       |Test metodi libreria SimpleWaitLib -> metodo wait(float time)|
 |**Riferimento**|                              |
-|**Descrizione**|Verificare la giusta funzionalità di tu |
-|**Prerequisiti**|Store on local PC: Profile\_1.2.001.xml (appendix n\_n) and Cards\_1.2.001.txt (appendix n\_n) |
-|**Procedura**     | - Go to “Cards manager” menu, in main page click “Import Profiles” link, Select the “1.2.001.xml” file, Import the Profile - Go to “Cards manager” menu, in main page click “Import Cards” link, Select the “1.2.001.txt” file, Delete the cards, Select the “1.2.001.txt” file, Import the cards |
-|**Risultati attesi** |Keys visible in the DB (OtaCardKey) but not visible in the GUI (Card details) |
+|**Descrizione**|Verificare la giusta funzionalità del metodo wait(float) della libreria SimpleWaitLib |
+|**Prerequisiti**| finito di scrivere la libreria |
+|**Procedura**     | - Creare un file di test <br> - Inserire il riferimento alla libreria con `#include SimpleWaitLib.h` <br> - eseguire il seguente pezzo di codice: <br> `goMotor(127, motorA);`<br> `wait(5);` <br> `stopMotor(motorA);` <br> `wait(5);` |
+|**Risultati attesi** | Il motore va a massiam potenza per 5 secondi dopodiche si ferma per 5 secondi |
 
 |Test Case      | TC-002                            |
 |---------------|--------------------------------------|
 |**Nome**       |Test sensori e attuatori |
 |**Riferimento**|REQ-003                               |
 |**Descrizione**|Controllare i sensori letti dai sensori tramite il View del robot |
-|**Prerequisiti**| none |
+|**Prerequisiti**| Avere tutti i sensori |
 |**Procedura**     | - Accendere il robot <br> - Navigrare con i tasti il menu e selezionare la opzione *View* <br> - Controllare ogni sensore e attuatore |
 |**Risultati attesi** |Valori validi e sensati da tutti i sensori <br> La velocità e tick dei motori segnati in modo giusto  |
 
@@ -227,6 +227,7 @@ ripetibile alle stesse condizioni.
 
 | Nome    | ID    | Risultato |
 |-----    |----   |-----------|
+|Test metodi libreria SimpleWaitLib -> metodo wait(float time)    |TC-001 |passato    |
 |Test sensori e attuatori    |TC-002 |passato    |
 
 
