@@ -202,12 +202,12 @@ ripetibile alle stesse condizioni.
 
 |Test Case      | TC-001                               |
 |---------------|--------------------------------------|
-|**Nome**       |Test metodi libreria SimpleWaitLib -> metodo wait(float time)|
+|**Nome**       |Test metodo wait della libreria SimpleWaitLib|
 |**Riferimento**|                              |
-|**Descrizione**|Verificare la giusta funzionalità del metodo wait(float) della libreria SimpleWaitLib |
-|**Prerequisiti**| finito di scrivere la libreria |
-|**Procedura**     | - Creare un file di test <br> - Inserire il riferimento alla libreria con `#include SimpleWaitLib.h` <br> - eseguire il seguente pezzo di codice: <br> `goMotor(127, motorA);`<br> `wait(5);` <br> `stopMotor(motorA);` <br> `wait(5);` |
-|**Risultati attesi** | Il motore va a massiam potenza per 5 secondi dopodiche si ferma per 5 secondi |
+|**Descrizione**|Verificare la giusta funzionalità del metodo *wait* della libreria SimpleWaitLib |
+|**Prerequisiti**| Implementazione del metodo wait terminata |
+|**Procedura**     | - Creare un file di test (es: `test.c`) <br> - Inserire il riferimento alla libreria tramite `#include SimpleWaitLib.h` <br> - Inserire, compilare ed eseguire il seguente codice: <br> `goMotor(127, motorA);`<br> `wait(5);` <br> `stopMotor(motorA);` <br> `wait(5);` |
+|**Risultati attesi** | Il motore va a massima velocità per 5 secondi dopodichè si ferma ed aspetta per 5 secondi prima di arrestare il programma.|
 
 |Test Case      | TC-002                            |
 |---------------|--------------------------------------|
@@ -223,8 +223,6 @@ ripetibile alle stesse condizioni.
 |-----    |----   |-----------|
 |Test metodi libreria SimpleWaitLib -> metodo wait(float time)    | TC-001 |passato    |
 |Test sensori e attuatori    |TC-002 | passato    |
-
-
 
 ### Mancanze/limitazioni conosciute
 
