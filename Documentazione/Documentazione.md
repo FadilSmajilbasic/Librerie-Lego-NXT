@@ -183,6 +183,15 @@ componenti utilizzati. Eventualmente questa va allegata.
 
 Per eventuali dettagli si possono inserire riferimenti ai diari.
 
+#### Explorer
+
+Per mostrare un utilizzo della nosta libreria svuluppata abbiamo creato un programma d'esempio "Explorer" che va in giro a esplorare il teritorio.
+
+##### Il diagramma di flusso del programma:
+
+![DiagrammaDiFlussoExplorer](img/DiagrammaDiFlussoExplorer.png)
+
+
 ## Test
 
 ### Protocollo di test
