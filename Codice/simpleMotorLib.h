@@ -12,13 +12,11 @@
 /// </remarks>
 #endif
 
-#include "SimpleWaitLib.h"
-
 //Funziona
 void goMotorSeconds(short port, float seconds , byte power = 127)
 {
 	motor[port] = power;
-	wait(seconds);
+	wait1Msec(1000);
 }
 
 //Funziona
