@@ -50,23 +50,20 @@
   Il progetto sarà gestito e realizzato dall’allievo Luca Di Bello e Fadil Smajlbasic (studenti di informatica all’Arti e Mestieri di Trevano) sotto la supervisione del professor Luca Muggiasca, Adriano Barchi, Francesco Mussi e dalla professoressa Elisa Nannini.
   La realizzazione del progetto prenderà piede il 16 novembre 2018 (16/11/18) e dovrà essere consegnato entro il 25.01.19
 
-
 ### Abstract
 
- In this document we will describe how we made a library for the Lego Mindstorms NXT. The library needed to be simple to use. Before our solution the users needed to use the IDE provided by Lego, and use the graphical interface whitch makes even a simple line follower a frustrating operation of needing to use the drag and drop function of the “Lego programming blocks”. We were tasked to make the process simpler creating a library with some useful functions for the various input-output interfaces (buttons, gyros, ultrasonic sensors, motors, ecc.) that the NXT has to offer, furthermore it uses the standard coding format that a lot of programming languages use since it derives from C. We had two languages to write the library: The first was Java and the second is RobotC. Based on the execution time and the efficiency we had to choose one or the other and motivate the choice. With the help of this library an average student should be able to do basic programs for the Lego NXT without any problems.
+  In this document we will describe how we made a library for the Lego Mindstorms NXT. The library needed to be simple to use. Before our solution the users needed to use the IDE provided by Lego, and use the graphical interface whitch makes even a simple line follower a frustrating operation of needing to use the drag and drop function of the “Lego programming blocks”. We were tasked to make the process simpler creating a library with some useful functions for the various input-output interfaces (buttons, gyros, ultrasonic sensors, motors, ecc.) that the NXT has to offer, furthermore it uses the standard coding format that a lot of programming languages use since it derives from C. We had two languages to write the library: The first was Java and the second is RobotC. Based on the execution time and the efficiency we had to choose one or the other and motivate the choice. With the help of this library an average student should be able to do basic programs for the Lego NXT without any problems.
 
 ### Scopo
 
-  Lo scopo del progetto è di creare due librerie (una in Java ed una in RobotC) da utilizzare per la programmazione del blocchetto NXT ed EV3. Lo scopo di queste librerie è il rendere la programmazione del robot lego più semplice aggiungendo delle funzionalità tipiche per ogni sensore del robot. Questo permette di salvare molto tempo nel processo di implementazione del codice.
-
+  Lo scopo del progetto è di creare delle librerie da utilizzare per la programmazione del blocchetto NXT. Lo scopo di questa libreria è rendere la programmazione del robot lego più semplice ed efficace aggiungendo delle funzionalità tipiche per ogni sensore del robot. Questo permette di salvare molto tempo nel processo di implementazione del codice.
 
 ## Analisi
 
 ### Analisi del dominio
 
   In questo momento i blocchetti NXT ed EV3 vengono programmati tramite il programma grafico chiamato “Lego Mindstorms”, esso non necessita nessuna conoscenza di linguaggi per essere utilizzato dato che utilizza una programmazione grafica e non testuale. Essendo molto semplice la programmazione in quel modo si perdono diverse funzionalità che si possono riottenere cambiando approccio, quindi passando alla programmazione nuda e cruda. Essa può essere svolta con due linguaggi principali: Java e RobotC (un adattamento del linguaggio C).
-Gli alunni che utilizzano i robot Lego non hanno mai programmato i blocchetti in un altro linguaggio, ma dispongono delle limitate conoscenze del linguaggio Java. 
-
+  Gli alunni che utilizzano i robot Lego non hanno mai programmato i blocchetti in un linguaggio differente da quello grafico, ma dispongono delle limitate conoscenze del linguaggio Java. 
 
 ### Analisi e specifica dei requisiti
 
@@ -76,12 +73,13 @@ Gli alunni che utilizzano i robot Lego non hanno mai programmato i blocchetti in
 
   |ID  |REQ-001                                         |
   |----|------------------------------------------------|
-  |**Nome**    |Librerie in Java e RobotC|
+  |**Nome**    |Libreria in RobotC|
   |**Priorità**|1                     |
   |**Versione**|1.0                   |
   |            |**Sotto requisiti**|
-  |**001**      | Classe per ogni sensore ed attuatore|
-  |**002**      | Codice ben commentato (Inglese o Italiano)|
+  |**001**      | Classe per l'utilizzo semplificato dei motori|
+  |**002**      | Classe che implementa tutti i tipi di wait presenti in Lego MindStorms|
+  |**003**      | Codice ben commentato (Inglese o Italiano)|
 
   |ID  |REQ-002                                         |
   |----|------------------------------------------------|
@@ -90,7 +88,7 @@ Gli alunni che utilizzano i robot Lego non hanno mai programmato i blocchetti in
   |**Versione**|1.0                   |
   |**Note**    | Da consegnare alla fine del progetto in allegato alla documentazione|
   |            |**Sotto requisiti**|
-  |**001**      | Guida all'istallazione dei firmware sul blocchetto|
+  |**001**      | Guida all'installazione dei firmware sul blocchetto|
   |**002**      | Guida che istruisce l'utente all'utilizzo del blocchetto|
 
   |ID  |REQ-003                                         |
@@ -108,10 +106,7 @@ Gli alunni che utilizzano i robot Lego non hanno mai programmato i blocchetti in
   |**Priorità**|1                     |
   |**Versione**|1.0                   |
   |            |**Sotto requisiti**|
-  |**001**      | Line Follower (standard e proporzionale)|
-  |**002**      | Allineamento ad una riga |
-  |**003**      | Wall Follower |
-  |**004**      | Segway (equilibrio su due ruote) |
+  |**001**      | Explorer con 4 sensori (Ultrasuoni, due touch, un sensore di luce)|
 
 ### Pianificazione
 
@@ -120,13 +115,11 @@ Gli alunni che utilizzano i robot Lego non hanno mai programmato i blocchetti in
 ### Analisi dei mezzi
 
 Per la realizzazione della libreria nel linguaggio RobotC useremo l'IDE di RobotC (v4.56) con la licenza fornita dalla scuola.
-Invece per la realizzazione della libreria nel linguaggio Java useremo l'IDE NetBeans (v8.2). Per poter sviluppare la libreria in Java necessitiamo della libreria "leJos 0.9.1-beta-3" per far comunicare in modo ottimale il codice con il blocchetto.
 Il prodotto verrà utilizzato dagli sviluppatori per programmare i loro algoritmi.
-La nostra soluzione verrà svulippata e testata utilizzando un Lego NXT ma dovrà funzionare anche sui Lego EV3.
-Per la comunicazione tra il pc è il blochettto lego abbiamo bisogno dei driver scaricati dal sito ufficiale di Lego: NXT Fantom Drivers v120.
+La nostra soluzione verrà svulippata e testata utilizzando un Lego NXT.
+Per la comunicazione tra il pc è il blochettto lego abbiamo bisogno di un driver trovabile sul sito ufficiale di Lego, esso è chiamato *NXT Fantom Drivers v120*.
 
-Hardware utilizzato per lo sviluppo:
-
+Lista delle specifiche tecniche dei computer sui quali è stato realizzato l'intero progetto:
 <ol>
   <li>
     Specifiche computer di Luca:
@@ -154,7 +147,7 @@ Hardware utilizzato per lo sviluppo:
 
 ### Design dei dati e database
 
-Nella figura sotto si può vedre il diagramam UML delle librerie e dei metodi di esse
+Nell'immagine sottostante è raffigurato il diagramma UML raffigurante la struttura delle varie classi che abbiamo utilizzato per lo sviluppo della libreria:
 
 ![Diagramma delle classi](img/Classes.png)
 
@@ -267,35 +260,19 @@ facilmente generalizzabili o sono specifici di un caso particolare? ecc
 
 ### Sitografia
 
-1.  URL del sito (se troppo lungo solo dominio, evt completo nel
-    diario),
+-   http://www.robotc.net/wikiarchive/General, *General Programming - RobotC*, consultato più volte durante tutto l’arco dell’implementazione progetto
 
-2.  Eventuale titolo della pagina (in italico),
-
-3.  Data di consultazione (GG-MM-AAAA).
-
-**Esempio:**
-
--   http://standards.ieee.org/guides/style/section7.html, *IEEE
-    Standards Style Manual*, 07-06-2008.
+-   http://www.robotc.net/forums/, *RobotC.net forums*, consultato più volte durante tutto l’arco dell’implementazione progetto
 
 ## Allegati
 
-Elenco degli allegati, esempio:
-
+<h1 style="color: red;">DA COMPLETARE </h1>
 -   Diari di lavoro
 
 -   Codici sorgente/documentazione macchine virtuali
-
--   Istruzioni di installazione del prodotto (con credenziali
-    di accesso) e/o di eventuali prodotti terzi
-
--   Documentazione di prodotti di terzi
 
 -   Eventuali guide utente / Manuali di utilizzo
 
 -   Mandato e/o Qdc
 
 -   Prodotto
-
--   …
