@@ -14,13 +14,9 @@
 
   - [Analisi e specifica dei requisiti](#analisi-e-specifica-dei-requisiti)
 
-  - [Use case](#use-case)
-
   - [Pianificazione](#pianificazione)
 
 3. [Progettazione](#progettazione)
-
-  - [Design dell’architettura del sistema](#design-dell’architettura-del-sistema)
 
   - [Design dei dati e database](#design-dei-dati-e-database)
 
@@ -164,7 +160,7 @@ Nella figura sotto si può vedre il diagramam UML delle librerie e dei metodi di
 
 ## Implementazione
 
-In questo capitolo dovrà essere mostrato come è stato realizzato il
+<!-- In questo capitolo dovrà essere mostrato come è stato realizzato il
 lavoro. Questa parte può differenziarsi dalla progettazione in quanto il
 risultato ottenuto non per forza può essere come era stato progettato.
 
@@ -181,7 +177,20 @@ scelte di prodotti con motivazione delle scelte.
 Non deve apparire nessuna forma di guida d’uso di librerie o di
 componenti utilizzati. Eventualmente questa va allegata.
 
-Per eventuali dettagli si possono inserire riferimenti ai diari.
+Per eventuali dettagli si possono inserire riferimenti ai diari. -->
+
+Nella nostra implementazione abbiamo creato due librerie separate, la SimpleWaitLib che è utile per l'utilizzio dei sensori e la SimpleMotorLib che è utile per l'utilizzo dei motori.
+
+
+Questo è il codice della libreria SimpleWaitLib, essa contiente tutti i metodi richiesti per operare i sensori dell'NXT:
+
+```codice Simple wait lib```
+
+Questo è il codice della libreria SimpleMotorLib questa ilbreria contine i metodi per operari i sensori in segenti modi: numero delle rotazioni, gradi, secondi, a massima potenza, :
+
+```codice Simple motor lib```
+
+
 
 #### Explorer
 
@@ -201,6 +210,15 @@ garantire l’adempimento delle richieste formulate nei requisiti. I test
 fungono da garanzia di qualità del prodotto. Ogni test deve essere
 ripetibile alle stesse condizioni.
 
+
+|Test Case      | TC-001                               |
+|---------------|--------------------------------------|
+|**Nome**       |Import a card, but not shown with the GUI |
+|**Riferimento**|REQ-012                               |
+|**Descrizione**|Import a card with KIC, KID and KIK keys with no obfuscation, but not shown with the GUI |
+|**Prerequisiti**|Store on local PC: Profile\_1.2.001.xml (appendix n\_n) and Cards\_1.2.001.txt (appendix n\_n) |
+|**Procedura**     | - Go to “Cards manager” menu, in main page click “Import Profiles” link, Select the “1.2.001.xml” file, Import the Profile - Go to “Cards manager” menu, in main page click “Import Cards” link, Select the “1.2.001.txt” file, Delete the cards, Select the “1.2.001.txt” file, Import the cards |
+|**Risultati attesi** |Keys visible in the DB (OtaCardKey) but not visible in the GUI (Card details) |
 
 |Test Case      | TC-001                               |
 |---------------|--------------------------------------|

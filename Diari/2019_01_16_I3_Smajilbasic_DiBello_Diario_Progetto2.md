@@ -4,7 +4,7 @@
 
 ### Lavori svolti
 
-Abbiamo costruito il robot che useremo per fare il programma di'esempio "Explorer"
+Abbiamo quasi finito il programma Explorer, manca la funzionalità che si ferma quando vede una riga nera
 
 ![Diagramma di flusso](../Documentazione/img/DiagrammaDiFlussoExplorer.png)
 
@@ -14,4 +14,4 @@ Abbiamo costruito il robot che useremo per fare il programma di'esempio "Explore
 Siamo avanti rispetto al gantt preventivo.
 
 #### Programma di massima per la prossima giornata di lavoro
-Iniziare il sviluppo del programma per l'Explorer
+Finire Explorer con sensore di luce
