@@ -9,24 +9,71 @@
 #include "SimpleMotorLib.h"
 #include "SimpleWaitLib.h"
 
+float effective_black_range = -1;
+bool running = true;
+
+task checkLightSensor(){
+	while(running){
+		//If the light sensor finds black
+		if(SensorValue(light) <= effective_black_range){
+	 		stopMotor(motorA);
+	 		stopMotor(motorB);
+			running = false;
+	 	}
+		//Less CPU usage
+	 	wait1Msec(10);
+	}
+}
+
 task main()
 {
+	//usefull variables
 	int SPEED = 127;
 	int ROTATION_DEGREES = 350;
 	int MAX_DISTANCE = 30;
 	int MIN_DISTANCE = 10;
-	int BLACK_RANGE = 50;
+	float BLACK_RANGE = -1;
+	float LIGHT_PERCENTAGE = 30;
+	int START_COUNTDOWN = 5;
 
+	//Writes infos to the display
+	displayText(1,"Waiting for");
+	displayText(2,"calibration...");
+	displayText(3,"Put light sensor");
+	displayText(4,"on a black color");
+	displayText(5,"and press the ");
+	displayText(6,"orange button ;)");
+	waitNxtButtons(3);
 
+	//Calculates the right black range
+	BLACK_RANGE = SensorValue(light);
+	effective_black_range = BLACK_RANGE + BLACK_RANGE/100 * LIGHT_PERCENTAGE;
 
-	while(true){
-		if(SensorValue(light) <= BLACK_RANGE){
-	 		//break;
-	 	}
+	//Wait <START_COUNTDOWN> secs for starting the program
+	eraseDisplay();
+	for(int i = 0; i < START_COUNTDOWN;i++){
+		nxtDisplayTextLine(3, "%d seconds to go", START_COUNTDOWN - i);
+		wait(1);
+	}
+
+	//Start lightSensor checker
+	startTask(checkLightSensor);
+
+	//Start the effective program
+	while(running){
+		//Display variables values to the screen
+		displaySensorValues(1, light);
+		displaySensorValues(2, distance);
+		displaySensorValues(3, touchRight);
+		displaySensorValues(4, touchLeft);
+		displayVariableValues(5, running);
+		displayVariableValues(6, effective_black_range);
+
+	 	//if the sensor is near a wall
 		if(SensorValue(distance) <= MAX_DISTANCE){
 	 		bool right = (((rand() % (10-0)) + 0) % 2 == 0);
 
-	 		//Ferma i motori
+	 		//Stops the motors
 			stopMotor(motorLeft);
 			stopMotor(motorRight);
 
@@ -38,28 +85,31 @@ task main()
 			}
 
 			if(right){
-					//Va a destra
+				//Turn right
 				goMotorDegrees(motorLeft,ROTATION_DEGREES,SPEED);
 			}
 			else{
+				//Turn left
 				goMotorDegrees(motorRight,ROTATION_DEGREES,SPEED);
 			}
 	 	}
+	 	//If the left button has been pressed
 		else if(SensorValue(touchLeft)){
-			//Va indietro
+			//Go back
 	 		goMotorStandard(motorRight,-SPEED);
 	 		goMotorStandard(motorLeft,-SPEED);
 
 	 		wait(1);
 
-	 		//Ferma i motori
+	 		//Stops the motors
 			stopMotor(motorLeft);
 			stopMotor(motorRight);
 
-			//Va a destra
+			//Turns right
 			goMotorDegrees(motorLeft,ROTATION_DEGREES,SPEED);
 
 		}
+		//If the right button has been pressed
 		else if(SensorValue(touchRight)){
 			//Va indietro
 	 		goMotorStandard(motorRight,-SPEED);
@@ -74,10 +124,10 @@ task main()
 			//Va a destra
 			goMotorDegrees(motorRight,ROTATION_DEGREES,SPEED);
 	 	}
+	 	//Else the robot goes straight
 		else{
 			goMotorStandard(motorRight,SPEED);
 			goMotorStandard(motorLeft,SPEED);
 		}
 	}
-
 }
