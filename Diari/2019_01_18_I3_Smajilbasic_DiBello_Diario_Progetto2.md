@@ -5,7 +5,7 @@
 ### Lavori svolti
 
 Il programma d'esempio explorer è finito cno tutte le funzionalità richieste.
-Abbiamo continuato a scrivere l'Implementazione nella documentazione.
+Abbiamo continuato a scrivere l'Implementazione e abbiamo iniziato a scrivere i test case nella documentazione.
 
 #### Problemi riscontrati e soluzioni adottate
 
@@ -35,3 +35,5 @@ Deve essere richiamata dal main task nel seguente modo:
 Siamo avanti rispetto al gantt preventivo.
 
 #### Programma di massima per la prossima giornata di lavoro
+
+Finire i test case e i risultati dei test della documentazione
