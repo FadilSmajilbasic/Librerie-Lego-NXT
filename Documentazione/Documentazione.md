@@ -9,7 +9,7 @@
 2. [Analisi](#analisi)
 
   - [Analisi del dominio](#analisi-del-dominio)
-  
+
   - [Analisi dei mezzi](#analisi-dei-mezzi)
 
   - [Analisi e specifica dei requisiti](#analisi-e-specifica-dei-requisiti)
@@ -52,7 +52,7 @@
 
 ### Abstract
 
-  In this document we will describe how we made a library for the Lego Mindstorms NXT. The library needed to be simple to use. Before our solution the users needed to use the IDE provided by Lego, and use the graphical interface whitch makes even a simple line follower a frustrating operation of needing to use the drag and drop function of the “Lego programming blocks”. We were tasked to make the process simpler creating a library with some useful functions for the various input-output interfaces (buttons, gyros, ultrasonic sensors, motors, ecc.) that the NXT has to offer, furthermore it uses the standard coding format that a lot of programming languages use since it derives from C. We had two languages to write the library: The first was Java and the second is RobotC. Based on the execution time and the efficiency we had to choose one or the other and motivate the choice. With the help of this library an average student should be able to do basic programs for the Lego NXT without any problems.
+  In this document we will describe how we made a library for the Lego Mindstorms NXT. The library needed to be simple to use. Before our solution the users needed to use the IDE provided by Lego, and use the graphical interface whitch makes even a simple line follower a frustrating operation of needing to use the drag and drop function of the “Lego programming blocks”. We were tasked to make the process simpler creating a library with some useful functions for the various input-output interfaces (buttons, ultrasonic sensors, motors, ecc.) that the NXT has to offer, furthermore it uses the standard coding format that a lot of programming languages use since it derives from C. We had the RobotC language to write the library. With the help of this library an average student should be able to do basic programs for the Lego NXT without any problems.
 
 ### Scopo
 
@@ -62,14 +62,14 @@
 
 ### Analisi del dominio
 
-  In questo momento i blocchetti NXT ed EV3 vengono programmati tramite il programma grafico chiamato “Lego Mindstorms”, esso non necessita nessuna conoscenza di linguaggi per essere utilizzato dato che utilizza una programmazione grafica e non testuale. Essendo molto semplice la programmazione in quel modo si perdono diverse funzionalità che si possono riottenere cambiando approccio, quindi passando alla programmazione nuda e cruda. Essa può essere svolta con due linguaggi principali: Java e RobotC (un adattamento del linguaggio C).
-  Gli alunni che utilizzano i robot Lego non hanno mai programmato i blocchetti in un linguaggio differente da quello grafico, ma dispongono delle limitate conoscenze del linguaggio Java. 
+  In questo momento il blocchetto NXT viene programmato tramite il programma grafico chiamato “Lego Mindstorms”, esso non necessita alcuna conoscenza di linguaggi di programmazione per essere utilizzato, questo perchè utilizza una programmazione grafica e non testuale.
+  Essendo molto semplice la programmazione grafica si perdono diverse funzionalità che si possono riottenere cambiando approccio, e quindi passando alla programmazione nuda e cruda. Essa può essere svolta con il lunguaggio *RobotC*.
+  Gli alunni che utilizzano i robot Lego non hanno mai programmato i blocchetti in un linguaggio differente da quello grafico, ma dispongono delle limitate conoscenze del linguaggio Java.
 
 ### Analisi e specifica dei requisiti
 
-  Il committente necessita di due librerie (una scritta in Java ed una scritta in RobotC). Il loro scopo è quello di semplificare il processo di programmazione dei robot della lego (sia NXT che EV3), esse devono comprendere dei metodi user-friendly, quindi che vengono richiamati e funzionano senza nessun bisogno di una programmazione aggiuntiva da parte dell'utilizzatore. Oltre alle libreria il committente necessita anche di una guida cartacea che spiega il processo di installazione dei firmware per far interagire le nostre librerie con il blocchetto.
-  Per usufruire semplificazioni del codice che offre il nostro prodotto bisogna soltanto importare la libreria (indipendentemente dal linguaggio). Essa conterrà degli oggetti, tramite i quali sarà possibile accedere a delle funzioni prefabbricate. Questo perchè l'obbiettivo del nostro lavoro è di creare un prodotto plug-and-play, il quale non necessita molte conoscenze di programmazione per essere utilizzato. L'utente quindi dovrà interagire minimamente con il codice, l'unica cosa che dovrà fare è creare un algoritmo utilizzando le funzioni già scritte all'interno della libreria, quindi non fa altro che fare un collage di funzioni al fine di raggiungere un algoritmo che svolge un azione desiderata.
-  Entrambe le librerie saranno in grado di fare le stesse determinate cose, l'unica differenza tra di loro sono le prestazioni: Java essendo un linguaggio interpretato sarà molto più lento rispetto al linguaggio RobotC.
+  Il committente necessita di una libreria scritta nel linguaggio *RobotC* il quale scopo è quello di semplificare il processo di programmazione dei robot NXT della Lego. Esse devono comprendere dei metodi user-friendly (quindi che vengono richiamati e funzionano senza nessun bisogno di una programmazione aggiuntiva da parte dell'utilizzatore). Oltre alle libreria il committente necessita anche di una guida cartacea che spiega il processo di installazione dei firmware per far interagire la nostra libreria con il blocchetto.
+  Per poter usufruire delle semplificazioni del codice che offre il nostro prodotto bisogna soltanto importare la libreria nel proprio file. Essa conterrà delle funzioni che svolgono delle funzioni prefabbricate. L'obbiettivo del nostro lavoro è di creare un prodotto plug-and-play, il quale non necessita molte conoscenze di programmazione per essere utilizzato. L'utente quindi dovrà interagire in modo minimo con il codice, l'unica cosa che dovrà fare è creare un algoritmo utilizzando le funzioni già scritte all'interno della nostra libreria, quindi non fa altro che fare un collage di funzioni al fine di raggiungere un algoritmo che svolge una/delle azioni desiderate.
 
   |ID  |REQ-001                                         |
   |----|------------------------------------------------|
@@ -102,7 +102,7 @@
 
   |ID  |REQ-004                                        |
   |----|------------------------------------------------|
-  |**Nome**    | Combinazioni di componenti |
+  |**Nome**    | Programma di esempio |
   |**Priorità**|1                     |
   |**Versione**|1.0                   |
   |            |**Sotto requisiti**|
@@ -124,7 +124,7 @@ Lista delle specifiche tecniche dei computer sui quali è stato realizzato l'int
   <li>
     Specifiche computer di Luca:
     <ul>
-      Portatile Asus gl702vm:
+      <li>Nome: Portatile Asus gl702vm</li>
       <li>CPU: I7-7700HQ</li>
       <li>GPU: Nvidia GTX 1060 6GB</li>
       <li>RAM: 16GB</li>
@@ -134,7 +134,7 @@ Lista delle specifiche tecniche dei computer sui quali è stato realizzato l'int
   <li>
   Specifiche computer di Fadil:
   <ul>
-    Portatile HP Pavilion cs0800nz:
+    <li>Nome: Portatile HP Pavilion cs0800nz</li>
     <li>CPU: I7-8550U</li>
     <li>GPU: Intel UHD Graphics 620</li>
     <li>RAM: 16GB</li>
@@ -174,7 +174,6 @@ Per eventuali dettagli si possono inserire riferimenti ai diari. -->
 
 Nella nostra implementazione abbiamo creato due librerie separate, la SimpleWaitLib che è utile per l'utilizzio dei sensori e la SimpleMotorLib che è utile per l'utilizzo dei motori.
 
-
 Questo è il codice della libreria SimpleWaitLib, essa contiente tutti i metodi richiesti per operare i sensori dell'NXT:
 
 ```codice Simple wait lib```
@@ -183,8 +182,6 @@ Questo è il codice della libreria SimpleMotorLib questa ilbreria contine i meto
 
 ```codice Simple motor lib```
 
-
-
 #### Explorer
 
 Per mostrare un utilizzo della nosta libreria svuluppata abbiamo creato un programma d'esempio "Explorer" che va in giro a esplorare il teritorio.
@@ -192,7 +189,6 @@ Per mostrare un utilizzo della nosta libreria svuluppata abbiamo creato un progr
 ##### Il diagramma di flusso del programma:
 
 ![DiagrammaDiFlussoExplorer](img/DiagrammaDiFlussoExplorer.png)
-
 
 ## Test
 
@@ -209,10 +205,9 @@ ripetibile alle stesse condizioni.
 |---------------|--------------------------------------|
 |**Nome**       |Test sensori e attuatori |
 |**Riferimento**|REQ-003                               |
-|**Descrizione**|Controllare i sensori letti dai sensori tramite il View del robot |
-|**Prerequisiti**| Avere tutti i sensori |
-|**Procedura**     | - Accendere il robot <br> - Navigrare con i tasti il menu e selezionare la opzione *View* <br> - Controllare ogni sensore e attuatore |
-|**Risultati attesi** |Valori validi e sensati da tutti i sensori <br> La velocità e tick dei motori segnati in modo giusto  |
+|**Descrizione**|Controllare i valori letti dai sensori ed attuatori per garantirne il corretto funzionamento |
+|**Procedura**     | - Accendere il blocchetto NXT <br> - Navigare tramite i relativi tasti nel menu principale e selezionare l'opzione *View* <br> - Controllare il corretto funzionamento di ogni sensore ed attuatore |
+|**Risultati attesi** | Valori validi e sensati da tutti i sensori ed attuatori. La velocità ed i tick dei motori devono essere realistici.  |
 
 |Test Case      | TC-002                        |
 |---------------|--------------------------------------|
@@ -267,26 +262,24 @@ stato una perdita di tempo? I risultati ottenuti sono generali,
 facilmente generalizzabili o sono specifici di un caso particolare? ecc
 
 ### Sviluppi futuri
+
   Migliorie o estensioni che possono essere sviluppate sul prodotto.
 
 ### Considerazioni personali
+
   Cosa ho imparato in questo progetto? ecc
 
 ### Sitografia
 
--   http://www.robotc.net/wikiarchive/General, *General Programming - RobotC*, consultato più volte durante tutto l’arco dell’implementazione progetto
+- http://www.robotc.net/wikiarchive/General, *General Programming - RobotC*, consultato più volte durante tutto l’arco dell’implementazione progetto
 
--   http://www.robotc.net/forums/, *RobotC.net forums*, consultato più volte durante tutto l’arco dell’implementazione progetto
+- http://www.robotc.net/forums/, *RobotC.net forums*, consultato più volte durante tutto l’arco dell’implementazione progetto
 
 ## Allegati
-
 <h1 style="color: red;">DA COMPLETARE </h1>
--   Diari di lavoro
 
--   Codici sorgente/documentazione macchine virtuali
-
--   Eventuali guide utente / Manuali di utilizzo
-
--   Mandato e/o Qdc
-
--   Prodotto
+- Diari di lavoro
+- Codici sorgente/documentazione macchine virtuali
+- Eventuali guide utente / Manuali di utilizzo
+- Mandato e/o Qdc
+- Prodotto
