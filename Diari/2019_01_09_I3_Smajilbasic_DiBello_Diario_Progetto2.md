@@ -4,7 +4,7 @@
 
 ### Lavori svolti
 
-Finendo il sviluppo della libreria del sensore di luce, abbiamo finito tutte le librerie, la prossima giornata di lavoro dovremmo iniziare a sviluppare il progetto di esempio chiamato "Explorer".
+Finendo lo sviluppo della libreria del sensore di luce, abbiamo finito tutte le librerie, la prossima giornata di lavoro dovremmo iniziare a sviluppare il progetto di esempio chiamato "Explorer".
 
 <!-- #### Problemi riscontrati e soluzioni adottate -->
 
