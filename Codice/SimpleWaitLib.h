@@ -16,7 +16,7 @@ void wait(float time){
 	wait1Msec(time * 1000);
 }
 
-void waitNxtButtons(int button){
+void waitNxtButtons(short button){
 	/*
 		0 = Gray Rectangle button.
 		1 = Right Arrow button.
@@ -32,6 +32,7 @@ void waitDistance(short port,int distance,short mode){
 	//MODE == 0 -> LESS
 	//MODE == 1 -> GREATER
 
+	if(distance > 255){distance = 255;}
 	if(mode == 0){
 		while(true){
 			float curr_distance = SensorValue(port);
@@ -71,26 +72,25 @@ void waitLight(short port,int light_value ,short mode){
 	//MODE == 0 -> LESS
 	//MODE == 1 -> GREATER
 
-  if(mode == 0){
-  	while(true){
-  		writeDebugStreamLine("Less mode, current value: %d",SensorValue(port));
-  		if(SensorValue(port) < light_value){
-  			break;
-  		}
-  	}
-  }
-  else if(mode == 1){
-  	while(true){
-  	writeDebugStreamLine("Greater mode, current value: %d",SensorValue(port));
-  	if(SensorValue(port) > light_value){
-  			break;
-  		}
-  	}
-  }
+	if(mode == 0){
+		while(true){
+			writeDebugStreamLine("Less mode, current value: %d",SensorValue(port));
+			if(SensorValue(port) < light_value){
+				break;
+			}
+		}
+	}
+	else if(mode == 1){
+		while(true){
+			writeDebugStreamLine("Greater mode, current value: %d",SensorValue(port));
+			if(SensorValue(port) > light_value){
+					break;
+			}
+		}
+	}
 }
 
 void waitTouch(short port,short mode){
-	//writeDebugStreamLine("int x is: %d", SensorValue(port));
 	//MODE == 0 -> PRESSED
 	//MODE == 1 -> RELEASED
 	//MODE == 2 -> CLICKED

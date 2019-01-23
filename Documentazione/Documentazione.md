@@ -172,33 +172,76 @@ componenti utilizzati. Eventualmente questa va allegata.
 
 Per eventuali dettagli si possono inserire riferimenti ai diari. -->
 
-Nella nostra implementazione abbiamo creato due librerie separate, la SimpleWaitLib che è utile per l'utilizzio dei sensori e la SimpleMotorLib che è utile per l'utilizzo dei motori.
+Come è già stato detto in precedenza il nostro compito è stato quello di creare delle librerie che semplificano la programmazione dei robot NXT. Noi abbiamo sviluppato due librerie:
+La prima è chiamata "SimpleWaitLib", la quale contiene tutti i tipi di wait presenti. La seconda libreria invece si chiama "SimpleMotorLib", la quale implementa delle funzionalità semplificate
+per l'utilizzo dei motori.
+Avevamo pensato di implementare una libreria per sensore, ma abbiamo notato che RobotC metteva già a disposizione del programmatore delle funzioni semplificate. L'unico attuatore che non presentava funzionalità
+prefabbricate era proprio il motore, questo ci ha portato a sviluppare noi le funzioni mancanti.
 
-Questo è il codice della libreria SimpleWaitLib, essa contiente tutti i metodi richiesti per operare i sensori dell'NXT:
+### SimpleWaitLib
 
-```codice Simple wait lib```
+Per sviluppare la libreria contenete le varie funzioni di waiting (Libreria SimpleWaitLib) non abbiamo fatto altro che aprire il programma originale per la programmazione dei blocchetti (Lego MindStorms) e sviluppato
+tutti i tipi di wait presenti. Essi sono questi:
 
-Questo è il codice della libreria SimpleMotorLib questa ilbreria contine i metodi per operari i sensori in segenti modi: numero delle rotazioni, gradi, secondi, a massima potenza, :
+- wait
+- waitNxtButtons
+- waitDistance
+- waitMicrophone
+- waitLight
+- waitTouch
 
-```codice Simple motor lib```
+#### Wait
 
-#### Explorer
+Questo metodo è utilizzato per far aspettare/continuare un operazione per un tot di secondi.
+Il numero di secondi verrà passato al metodo tramite parametro: ```wait(float secondi)```.
+Questo metodo non fa altro che richiamare la funzione di sleep già implementata in RobotC. Abbiamo deciso di implementare questo metodo per avere un nome più autoesplicativo
 
-Per mostrare un utilizzo della nosta libreria svuluppata abbiamo creato un programma d'esempio "Explorer" che va in giro a esplorare il teritorio.
+#### WaitNxtButtons
 
-##### Il diagramma di flusso del programma:
+Questo metodo è utilizzato per far aspettare/continuare un operazione finchè uno dei pulsanti del blocchetto (quelli posti sotto il display) venga premuto. Il pulsate da premere viene specificato come parametro al richiamo della funzione: ```waitNxtButtons(short id_pulsante)```.
+
+Gli id dei pulsanti sono questi:
+0: Rettangolo grigio
+1: Freccia destra
+2: Freccia sinistra
+3: Quadrato arancione
+
+#### WaitDistance
+
+Questo metodo è utilizzato per far aspettare/continure un operazione finchè il sensore ultrasuoni (di distanza) non rileva una certa distanza. La funzione può essere "tarata" in modo da poter scegliere se la distanza dev'essere minore o maggiore di un certo valore. Ovviamente per utilizzare questa funzionalità bisogna avere a disposizione un sensore ad ultrasuoni.
+Queste impostazioni si passano al metodo come parametro: ```waitDistance(short sensore,int distanza, short modalità)```
+
+Come ho detto il precedenza la funzione permette la possibilità di essere tarata, questo si può fare tramite il parametro modalità. Se passo il valore 0 non fa altro che aspettare finchè il valore corrente (letto dal sensore) sia minore di quello passato (parametro "distanza"). Se si passa il valore 1 come modalità la funzione fa l'esatto contrario: aspetta finchè il valore corrente sia maggiore di quello passato.
+Il parametro "distanza" può avere un valore massimo di 255 cm.
+
+N.B. Il parametro "sensore" non è altro che la referenza al sensore.
+
+#### WaitMicrophone
+
+Questo metodo è utilizzato per far aspettare/continure un operazione finchè il microfono non rileva una certo valore di Db (Decibel). Anche questa funzione può essere tarata in modo da poter scegliere se il valore di Db dev'essere minore o maggiore di un certo valore. Ovviamente per utilizzare questa funzionalità bisogna avere a disposizione microfono.
+Queste impostazioni si passano al metodo come parametro: ```waitMicrophone(short sensore,int decibel, short modalità)```
+
+Il parametro "sensore" non è altro che una refernza al sensore (microfono in questo caso). Il parametro "modalità" invece serve per poter tarare la funzione.
+Se al parametro modalità viene passato il valore 0, la funzione aspetta finchè i Db letti dal microfono siano minori del valore passato nel parametro "decibel". Se si passa 1 la funzione aspetta finchè il valore letto dal microfono sia maggiore di quello passato come target.
+
+#### WaitLight
+
+#### WaitTouch
+
+-----------------------------------------
+### SimpleMotorLib
+
+### Explorer
+
+Per mostrare l'utilizzo delle noste librerie sviluppate abbiamo creato un programma d'esempio. Il programma ha come scopo quello di far esplorare il territorio al robot.
+
+##### Il diagramma di flusso del programma
 
 ![DiagrammaDiFlussoExplorer](img/DiagrammaDiFlussoExplorer.png)
 
 ## Test
 
 ### Protocollo di test
-
-Definire in modo accurato tutti i test che devono essere realizzati per
-garantire l’adempimento delle richieste formulate nei requisiti. I test
-fungono da garanzia di qualità del prodotto. Ogni test deve essere
-ripetibile alle stesse condizioni.
-
 
 |Test Case      | TC-001                               |
 |---------------|--------------------------------------|
