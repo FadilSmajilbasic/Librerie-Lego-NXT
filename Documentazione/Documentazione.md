@@ -180,8 +180,7 @@ prefabbricate era proprio il motore, questo ci ha portato a sviluppare noi le fu
 
 ### SimpleWaitLib
 
-Per sviluppare la libreria contenete le varie funzioni di waiting (Libreria SimpleWaitLib) non abbiamo fatto altro che aprire il programma originale per la programmazione dei blocchetti (Lego MindStorms) e sviluppato
-tutti i tipi di wait presenti. Essi sono questi:
+Per sviluppare la libreria contenete le varie funzioni di waiting (Libreria SimpleWaitLib) non abbiamo fatto altro che aprire il programma originale per la programmazione dei blocchetti (Lego MindStorms) e sviluppato tutti i tipi di wait presenti. Essi sono questi:
 
 - wait
 - waitNxtButtons
@@ -221,15 +220,43 @@ N.B. Il parametro "sensore" non è altro che la referenza al sensore.
 Questo metodo è utilizzato per far aspettare/continure un operazione finchè il microfono non rileva una certo valore di Db (Decibel). Anche questa funzione può essere tarata in modo da poter scegliere se il valore di Db dev'essere minore o maggiore di un certo valore. Ovviamente per utilizzare questa funzionalità bisogna avere a disposizione microfono.
 Queste impostazioni si passano al metodo come parametro: ```waitMicrophone(short sensore,int decibel, short modalità)```
 
-Il parametro "sensore" non è altro che una refernza al sensore (microfono in questo caso). Il parametro "modalità" invece serve per poter tarare la funzione.
+Il parametro "sensore" non è altro che una referenza al sensore (microfono in questo caso). Il parametro "modalità" invece serve per poter tarare la funzione.
 Se al parametro modalità viene passato il valore 0, la funzione aspetta finchè i Db letti dal microfono siano minori del valore passato nel parametro "decibel". Se si passa 1 la funzione aspetta finchè il valore letto dal microfono sia maggiore di quello passato come target.
 
 #### WaitLight
 
+Questo metodo è utilizzato per far aspettare/continure un operazione finchè il sensore di luce non rileva una certa percentuale di luce riflessa. Anche questa funzione può essere tarata in modo da poter scegliere se il valore di  dev'essere minore o maggiore di un certo valore. Ovviamente per utilizzare questa funzionalità bisogna avere a disposizione un sensore di luce.
+Queste impostazioni si passano al metodo come parametro: ```waitLight(short sensore,int percentuale_luce, short modalità)```
+
+Il parametro "sensore" non è altro che una referenza al sensore (sensore di luce in questo caso). Il parametro "modalità" invece serve per poter tarare la funzione.
+Se al parametro modalità viene passato il valore 0, la funzione aspetta finchè il valore letto dal sensore di luce sia minore del valore passato nel parametro "percentuale_luce". Se si passa 1 la funzione aspetta finchè il valore letto sensore di luce sia maggiore di quello passato come target.
+
 #### WaitTouch
 
------------------------------------------
+Questo metodo è utilizzato per far aspettare/continure un operazione finchè non avviene una determinata operazione sul sensore touch (pulsante). Questa "determinata azione" si può impostare al richiamo del metodo tramite il parametro mode: ```waitTouch(short port,short mode)```
+
+Il parametro "mode" ha 3 diffenti opzioni. Se viene passato il valore 0 il metodo bloccherà il programma finchè il pulsante verrà premuto (pressed). Se gli viene passato 1 invece il programma aspetterà finchè il pulsante sarà rilasciato (released) ed infine se viene impostato a 2 il programma aspetterà finchè il pulsante viene premuto e rilasciato.
+
 ### SimpleMotorLib
+
+Per sviluppare la libreria contenete le varie funzioni relative ai motori abbiamo utilizzato lo stesso metodo attuato per lo sviluppo di *SimpleWaitLib*: abbiamo usato il programma Lego MindStorms per vedere quali funzioni hanno disponibili i motori per poi svilupparne una ad una con il linguaggio RobotC.
+Queste sono tutte le funzioni disponibili per i motori:
+
+- goMotorStandard
+- goMotorSeconds
+- goMotorDegrees
+- goMotorRotations
+- stopMotor
+
+#### goMotorStandard
+
+#### goMotorSeconds
+
+#### goMotorDegrees
+
+#### goMotorRotations
+
+#### stopMotor
 
 ### Explorer
 
