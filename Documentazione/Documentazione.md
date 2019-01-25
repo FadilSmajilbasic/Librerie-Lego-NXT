@@ -243,16 +243,7 @@ Per mostrare l'utilizzo delle noste librerie sviluppate abbiamo creato un progra
 
 ### Protocollo di test
 
-|Test Case      | TC-001                               |
-|---------------|--------------------------------------|
-|**Nome**       |Test metodo wait della libreria SimpleWaitLib|
-|**Riferimento**|                              |
-|**Descrizione**|Verificare la giusta funzionalità del metodo *wait* della libreria SimpleWaitLib |
-|**Prerequisiti**| Implementazione del metodo wait terminata |
-|**Procedura**     | - Creare un file di test (es: `test.c`) <br> - Inserire il riferimento alla libreria tramite `#include SimpleWaitLib.h` <br> - Inserire, compilare ed eseguire il seguente codice: <br> `goMotor(127, motorA);`<br> `wait(5);` <br> `stopMotor(motorA);` <br> `wait(5);` |
-|**Risultati attesi** | Il motore va a massima velocità per 5 secondi dopodichè si ferma ed aspetta per 5 secondi prima di arrestare il programma.|
-
-|Test Case      | TC-002                            |
+|Test Case      | TC-001                            |
 |---------------|--------------------------------------|
 |**Nome**       |Test sensori e attuatori |
 |**Riferimento**|REQ-003                               |
@@ -260,80 +251,6 @@ Per mostrare l'utilizzo delle noste librerie sviluppate abbiamo creato un progra
 |**Procedura**     | - Accendere il blocchetto NXT <br> - Navigare tramite i relativi tasti nel menu principale e selezionare l'opzione *View* <br> - Controllare il corretto funzionamento di ogni sensore ed attuatore |
 |**Risultati attesi** | Valori validi e sensati da tutti i sensori ed attuatori. La velocità ed i tick dei motori devono essere realistici.  |
 
-|Test Case      | TC-002                        |
-|---------------|--------------------------------------|
-|**Nome**       |Test metodi libreria SimpleWaitLib: metodo *wait(float time)*|
-|**Riferimento**| REQ-001                          |
-|**Descrizione**|Verificare la giusta funzionalità del metodo *wait(float time)* della libreria SimpleWaitLib |
-|**Prerequisiti**| Finire di scrivere la libreria<br>Collegare un motore alla porta A|
-|**Procedura**     | - Creare un file di test <br> - Inserire il riferimento alla libreria con `#include "SimpleWaitLib.h"` <br> - eseguire il seguente pezzo di codice: <br> `goMotor(127, motorA);`<br> `wait(5);` <br> `stopMotor(motorA);` <br> `wait(5);` |
-|**Risultati attesi** | Il motore va a massima potenza per 5 secondi dopodichè si ferma per 5 secondi |
-
-
-|Test Case      | TC-003                               |
-|---------------|--------------------------------------|
-|**Nome**       | Test metodi libreria SimpleWaitLib: metodo *waitNxtButtons(int button)* |
-|**Riferimento**| REQ-001                          |
-|**Descrizione**|Verificare la giusta funzionalità del metodo waitNxtButtons della libreria SimpleWaitLib |
-|**Prerequisiti**| Finire di scrivere la libreria<br>Collegare un motore alla porta A |
-|**Procedura**   | - Creare un file di test <br> - Inserire il riferimento alla libreria con `#include "SimpleWaitLib.h"` <br> - eseguire il seguente pezzo di codice:  <br> `goMotor(127, motorA);`<br> `waitNxtButtons(3);` <br> `stopMotor(motorA);` |
-|**Risultati attesi** | Il motore A parte con massima potenza,<br> una volta premuto il tasto centrale del robot (il tasto arancione) il motore A si ferma |
-
-|Test Case      | TC-004-01                            |
-|---------------|--------------------------------------|
-|**Nome**       | Test metodi libreria SimpleWaitLib: metodo *waitDistance(short port,int distance,short mode)* |
-|**Riferimento**| REQ-001                          |
-|**Descrizione**|Verificare la giusta funzionalità del metodo waitDistance della libreria SimpleWaitLib usando il modo LESS THAN |
-|**Prerequisiti**| Finire di scrivere la libreria<br>Collegare un motore alla porta A <br> Collegare il sensore ad Ultrasuoni nella porta  |
-|**Procedura**   | - Creare un file di test <br> - Inserire il riferimento alla libreria con `#include "SimpleWaitLib.h"` <br> - eseguire il seguente pezzo di codice:  <br> `goMotor(127, motorA);`<br> `waitDistance(1,150,1);` <br> `stopMotor(motorA);` |
-|**Risultati attesi** | Il motore A parte con massima potenza,<br> Il motore A coninuerà a girare finché il valore letto dal sensore ad Ultrasuoni è **maggiore** di 150 |
-
-|Test Case      | TC-004-02                            |
-|---------------|--------------------------------------|
-|**Nome**       | Test metodi libreria SimpleWaitLib: metodo *waitDistance(short port,int distance,short mode)* |
-|**Riferimento**| REQ-001                          |
-|**Descrizione**|Verificare la giusta funzionalità del metodo waitDistance della libreria SimpleWaitLib usando il modo GREATER THAN |
-|**Prerequisiti**| Finire di scrivere la libreria<br>Collegare un motore alla porta A <br> Collegare il sensore ad Ultrasuoni nella porta <--> |
-|**Procedura**   | - Creare un file di test <br> - Inserire il riferimento alla libreria con `#include "SimpleWaitLib.h"` <br> - eseguire il seguente pezzo di codice:  <br> `goMotor(127, motorA);`<br> `waitDistance(1,150,0);` <br> `stopMotor(motorA);` |
-|**Risultati attesi** | Il motore A parte con massima potenza,<br> Il motore A coninuerà a girare finché il valore letto dal sensore  ad Ultrasuoni è **minore** di 150 |
-
-
-|Test Case       | TC-005-01                             |
-|----------------|--------------------------------------|
-|**Nome**        | Test metodi libreria SimpleWaitLib: metodo *waitMicrophone(short port,int db,short mode)* |
-|**Riferimento** | REQ-001                          |
-|**Descrizione** |Verificare la giusta funzionalità del metodo waitMicrophone della libreria SimpleWaitLib |
-|**Prerequisiti**| Finire di scrivere la libreria<br>Collegare un motore alla porta A <br> Collegare il microfono nella porta 1 |
-|**Procedura**   | - Creare un file di test <br> - Inserire il riferimento alla libreria con `#include "SimpleWaitLib.h"` <br> - eseguire il seguente pezzo di codice:  <br> `goMotor(127, motorA);`<br> `waitMicrophone(1,75,0);` <br> `stopMotor(motorA);` |
-|**Risultati attesi** | Il motore A parte con massima potenza,<br> Il motore A coninuerà a girare finché il valore letto dal microfono è **minore** di 75 |
-
-|Test Case       | TC-005-02                             |
-|----------------|--------------------------------------|
-|**Nome**        | Test metodi libreria SimpleWaitLib: metodo *waitMicrophone(short port,int db,short mode)* |
-|**Riferimento** | REQ-001                          |
-|**Descrizione** |Verificare la giusta funzionalità del metodo waitMicrophone della libreria SimpleWaitLib |
-|**Prerequisiti**| Finire di scrivere la libreria<br>Collegare un motore alla porta A <br> Collegare il microfono nella porta 1 |
-|**Procedura**   | - Creare un file di test <br> - Inserire il riferimento alla libreria con `#include "SimpleWaitLib.h"` <br> - eseguire il seguente pezzo di codice:  <br> `goMotor(127, motorA);`<br> `waitMicrophone(1,75,1);` <br> `stopMotor(motorA);` |
-|**Risultati attesi** | Il motore A parte con massima potenza,<br> Il motore A coninuerà a girare finché il valore letto dal microfono è **maggiore** di 75 |
-
-
-|Test Case       | TC-006-01                             |
-|----------------|--------------------------------------|
-|**Nome**        | Test metodi libreria SimpleWaitLib: metodo *waitLight(short port,int light_value ,short mode)* |
-|**Riferimento** | REQ-001                          |
-|**Descrizione** |Verificare la giusta funzionalità del metodo waitLight della libreria SimpleWaitLib |
-|**Prerequisiti**| Finire di scrivere la libreria<br>Collegare un motore alla porta A <br> Collegare il sensore di luce nella porta 1 |
-|**Procedura**   | - Creare un file di test <br> - Inserire il riferimento alla libreria con `#include "SimpleWaitLib.h"` <br> - eseguire il seguente pezzo di codice:  <br> `goMotor(127, motorA);`<br> `waitLight(1,50,1);` <br> `stopMotor(motorA);` |
-|**Risultati attesi** | Il motore A parte con massima potenza,<br> Il motore A coninuerà a girare finché il valore letto dal sensore di luce è **maggiore** di 50 |
-
-|Test Case       | TC-006-02                             |
-|----------------|--------------------------------------|
-|**Nome**        | Test metodi libreria SimpleWaitLib: metodo *waitLight(short port,int light_value ,short mode)* |
-|**Riferimento** | REQ-001                          |
-|**Descrizione** |Verificare la giusta funzionalità del metodo waitLight della libreria SimpleWaitLib |
-|**Prerequisiti**| Finire di scrivere la libreria<br>Collegare un motore alla porta A <br> Collegare il sensore di luce nella porta 1 |
-|**Procedura**   | - Creare un file di test <br> - Inserire il riferimento alla libreria con `#include "SimpleWaitLib.h"` <br> - eseguire il seguente pezzo di codice:  <br> `goMotor(127, motorA);`<br> `waitLight(1,50,0);` <br> `stopMotor(motorA);` |
-|**Risultati attesi** | Il motore A parte con massima potenza,<br> Il motore A coninuerà a girare finché il valore letto dal sensore di luce è **minore** di 50 |
 
 
 #### template test case:
