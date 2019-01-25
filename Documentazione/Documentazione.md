@@ -252,6 +252,15 @@ Per mostrare l'utilizzo delle noste librerie sviluppate abbiamo creato un progra
 |**Risultati attesi** | Valori validi e sensati da tutti i sensori ed attuatori. La velocità ed i tick dei motori devono essere realistici.  |
 
 
+|Test Case      | TC-002                            |
+|---------------|--------------------------------------|
+|**Nome**       |Test delle due classi che compongono la libreria |
+|**Riferimento**|REQ-001                               |
+|**Descrizione**|Con questo test controlliamo il giusto funzionamento dei metodi delle due classi che compongono la libreria |
+|**Procedura**     | Per svolgere i test dei vari metodi delle classi abbiamo creato il Programma di test Explorer  |
+|**Risultati attesi** | Valori validi e sensati da tutti i sensori ed attuatori. La velocità ed i tick dei motori devono essere realistici.  |
+
+
 
 #### template test case:
 |Test Case       | TC-003                             |
