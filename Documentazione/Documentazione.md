@@ -103,7 +103,7 @@
   |ID  |REQ-004                                         |
   |----|------------------------------------------------|
   |**Nome**    | Programma di esempio |
-  |**Priorità**|1                     |
+  |**Priorità**|2                     |
   |**Versione**|1.0                   |
   |            |**Sotto requisiti**|
   |**001**      | Explorer con 4 sensori (Ultrasuoni, due touch, un sensore di luce)|
@@ -284,8 +284,8 @@ Per mostrare l'utilizzo delle noste librerie sviluppate abbiamo creato un progra
 |**Nome**       |Test delle due classi che compongono la libreria |
 |**Riferimento**|REQ-001                               |
 |**Descrizione**|Con questo test controlliamo il giusto funzionamento dei metodi delle due classi che compongono la libreria |
-|**Procedura**     | Per svolgere i test dei vari metodi delle classi abbiamo creato il Programma di test Explorer  |
-|**Risultati attesi** | Valori validi e sensati da tutti i sensori ed attuatori. La velocità ed i tick dei motori devono essere realistici.  |
+|**Procedura**     | Per svolgere i test dei vari metodi delle classi abbiamo creato il Programma di test Explorer (riferimento: [Explorer](#explorer))  |
+|**Risultati attesi** | Si aspettano prestazioni ottimali del robot utilizzando le libreria scritta in robotC e un corretto funzionamento dei metodi |
 
 
 
@@ -322,11 +322,14 @@ consuntivo).
 
 ## Conclusioni
 
-Quali sono le implicazioni della mia soluzione? Che impatto avrà?
+
+La nostra soluzione aiuterà in un modo significante alle generazini future di sviluppare programmi più complessi da utilizzare nella First Lego League o nella WRO.
+
+<!-- Quali sono le implicazioni della mia soluzione? Che impatto avrà?
 Cambierà il mondo? È un successo importante? È solo un’aggiunta
 marginale o è semplicemente servita per scoprire che questo percorso è
 stato una perdita di tempo? I risultati ottenuti sono generali,
-facilmente generalizzabili o sono specifici di un caso particolare? ecc
+facilmente generalizzabili o sono specifici di un caso particolare? ecc -->
 
 ### Sviluppi futuri
 
