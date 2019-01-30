@@ -1,2 +1,2 @@
 # Librerie-Lego-NXT
-Sistema didattico per Lego EV3/NXT con libreria e documentazione
+Sistema didattico sviluppato in RobotC per Lego NXT con libreria e documentazione
