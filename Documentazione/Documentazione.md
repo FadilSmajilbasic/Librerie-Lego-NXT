@@ -42,6 +42,7 @@
 
 9. [Allegati](#allegati)
 
+<div style="page-break-after: always;"></div>
 
 ## Introduzione
 
@@ -282,30 +283,30 @@ Per mostrare l'utilizzo delle noste librerie sviluppate abbiamo creato un progra
 |Test Case      | TC-002                            |
 |---------------|--------------------------------------|
 |**Nome**       |Test delle due classi che compongono la libreria |
-|**Riferimento**|REQ-001                               |
+|**Riferimento**|REQ-001 <br> REQ-004 |
 |**Descrizione**|Con questo test controlliamo il giusto funzionamento dei metodi delle due classi che compongono la libreria |
 |**Procedura**     | Per svolgere i test dei vari metodi delle classi abbiamo creato il Programma di test Explorer (riferimento: [Explorer](#explorer))  |
 |**Risultati attesi** | Si aspettano prestazioni ottimali del robot utilizzando le libreria scritta in robotC e un corretto funzionamento dei metodi |
 
 
 
-#### template test case:
+<!-- #### template test case:
 |Test Case       | TC-003                             |
 |----------------|--------------------------------------|
 |**Nome**        |`*NAME*` |
 |**Riferimento** | REQ-001                          |
 |**Descrizione** |Verificare la giusta funzionalità del metodo methodName della libreria SimpleWaitLib |
-|**Prerequisiti**| Finire di scrivere la libreria<br>Collegare un motore alla porta A <br> Collegare il sensore nella porta <--> |
+|**Prerequisiti**| Finire di scrivere la libreria<br>Collegare un motore alla porta A <br> Collegare il sensore nella porta  |
 |**Procedura**   | - Creare un file di test <br> - Inserire il riferimento alla libreria con `#include "SimpleWaitLib.h"` <br> - eseguire il seguente pezzo di codice: `*CODE*` |
-|**Risultati attesi** |  |
+|**Risultati attesi** |  | -->
 
 
 ### Risultati test
 
 | Nome    | ID    | Risultato |
 |-----    |----   |-----------|
-|Test metodi libreria SimpleWaitLib -> metodo wait(float time)    |TC-002 |passato    |
 |Test sensori e attuatori    |TC-001 |passato    |
+|Test delle due classi che compongono la libreria  |TC-002 |passato    |
 
 ### Mancanze/limitazioni conosciute
 
@@ -332,8 +333,8 @@ stato una perdita di tempo? I risultati ottenuti sono generali,
 facilmente generalizzabili o sono specifici di un caso particolare? ecc -->
 
 ### Sviluppi futuri
-
-  Migliorie o estensioni che possono essere sviluppate sul prodotto.
+  Nel futuro si potrebbero aggiungere delle funzionalità per semplificare ancora di più la programmazione del lego NXT robot. Una di queste funzionalità potrebbe essere il preciso sterzo del robot in base alla sua larghezza e al diametro della ruota.
+  <!-- Migliorie o estensioni che possono essere sviluppate sul prodotto. -->
 
 ### Considerazioni personali
 
@@ -344,6 +345,9 @@ facilmente generalizzabili o sono specifici di un caso particolare? ecc -->
 - http://www.robotc.net/wikiarchive/General, *General Programming - RobotC*, consultato più volte durante tutto l’arco dell’implementazione progetto
 
 - http://www.robotc.net/forums/, *RobotC.net forums*, consultato più volte durante tutto l’arco dell’implementazione progetto
+
+- http://www.legoengineering.com/clicking-brick-syndrome/ Per risolvere i problemi durante l'installazione del firmware
+
 
 ## Allegati
 <h1 style="color: red;">DA COMPLETARE </h1>
