@@ -12,8 +12,6 @@
 /// </remarks>
 #endif
 
-//TODO: COMMENTARE CODICE
-
 void goMotorStandard(short port, byte power = 127)
 {
 	//Imposto la potenza al motore

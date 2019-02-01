@@ -12,8 +12,6 @@
 /// </remarks>
 #endif
 
-//TODO: COMMENTARE CODICE
-
 void wait(float seconds){
 
 	//Aspetta per il numero di secondi specificato
