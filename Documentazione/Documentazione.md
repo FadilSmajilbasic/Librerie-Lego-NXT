@@ -311,7 +311,7 @@ completamente implementati, al di fuori dei test case. Non devono essere
 riportati gli errori e i problemi riscontrati e poi risolti durante il
 progetto.
 -->
-Certe operazioni per un programmatore principiante possono risultare  difficili, per esempio quando si vogliono svolgere contemporaneamente più azioni (in modo sincrono). Questo perchè necessitano dell'utilizzo di una *Task* (ovvero un *Thread*).  
+Certe operazioni per un programmatore principiante possono risultare  difficili, per esempio quando si vogliono svolgere contemporaneamente più azioni (in modo sincrono). Questo perchè necessitano dell'utilizzo di un'altra *Task* (quindi necessita l'utilizzo di un *Thread*).  
 
 ## Consuntivo
 
@@ -352,6 +352,6 @@ facilmente generalizzabili o sono specifici di un caso particolare? ecc -->
 
 - Diari di lavoro
 - Codice sorgente del prodotto
-- Guida installazione driver blocchetto
+- Guida installazione firmware
 - Mandato e/o Qdc
 - Prodotto
