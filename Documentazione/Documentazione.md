@@ -175,12 +175,12 @@ Per eventuali dettagli si possono inserire riferimenti ai diari. -->
 Come è già stato detto in precedenza il nostro compito è stato quello di creare delle librerie che semplificano la programmazione dei robot NXT. Noi abbiamo sviluppato due librerie:
 La prima è chiamata "SimpleWaitLib", la quale contiene tutti i tipi di wait presenti. La seconda libreria invece si chiama "SimpleMotorLib", la quale implementa delle funzionalità semplificate
 per l'utilizzo dei motori.
-Avevamo pensato di implementare una libreria per sensore, ma abbiamo notato che RobotC metteva già a disposizione del programmatore delle funzioni semplificate. L'unico attuatore che non presentava funzionalità
-prefabbricate era proprio il motore, questo ci ha portato a sviluppare noi le funzioni mancanti.
+Avevamo pensato di implementare una libreria per sensore ed attuatore, ma abbiamo notato che RobotC metteva già a disposizione del programmatore delle funzioni già fatte. L'unico attuatore che non presentava funzionalità
+prefabbricate era proprio il motore, questo ci ha obbligato a sviluppare noi le funzioni mancanti.
 
 ### SimpleWaitLib
 
-Per sviluppare la libreria contenete le varie funzioni di waiting (Libreria SimpleWaitLib) non abbiamo fatto altro che aprire il programma originale per la programmazione dei blocchetti (Lego MindStorms) e sviluppato tutti i tipi di wait presenti. Essi sono questi:
+Per sviluppare la libreria contenete le varie funzioni di waiting (libreria SimpleWaitLib) non abbiamo fatto altro che aprire il programma originale per la programmazione dei blocchetti Lego (chiamato Lego MindStorms) e sviluppato tutti i tipi di wait presenti al suo interno. Questa è la lista delle funzioni di waiting che abbiamo implementato:
 
 - wait
 - waitNxtButtons
@@ -191,15 +191,16 @@ Per sviluppare la libreria contenete le varie funzioni di waiting (Libreria Simp
 
 #### Wait
 
-Questo metodo è utilizzato per far aspettare/continuare un operazione per un tot di secondi.
+Questo metodo è utilizzato per far aspettare/continuare un operazione per un determinato lasso di tempo (specificato in secondi).
 Il numero di secondi verrà passato al metodo tramite parametro: ```wait(float secondi)```.
-Questo metodo non fa altro che richiamare la funzione di sleep già implementata in RobotC. Abbiamo deciso di implementare questo metodo per avere un nome più autoesplicativo
+Questo metodo non fa altro che richiamare la funzione di sleep già implementata in RobotC. Abbiamo deciso di implementare questo metodo per avere un nome più autoesplicativo.
 
 #### WaitNxtButtons
 
-Questo metodo è utilizzato per far aspettare/continuare un operazione finchè uno dei pulsanti del blocchetto (quelli posti sotto il display) venga premuto. Il pulsate da premere viene specificato come parametro al richiamo della funzione: ```waitNxtButtons(short id_pulsante)```.
+Questo metodo è utilizzato per far aspettare/continuare un operazione finchè uno dei pulsanti del blocchetto (quelli posti sotto il display) venga premuto. Il pulsate da premere viene specificato come parametro al richiamo della funzione: ```waitNxtButtons(short id_pulsante)```
 
-Gli id dei pulsanti sono questi:
+I codici identificativi dei pulsanti del blocchetto sono questi:
+
 0: Rettangolo grigio
 1: Freccia destra
 2: Freccia sinistra
@@ -208,7 +209,7 @@ Gli id dei pulsanti sono questi:
 #### WaitDistance
 
 Questo metodo è utilizzato per far aspettare/continure un operazione finchè il sensore ultrasuoni (di distanza) non rileva una certa distanza. La funzione può essere "tarata" in modo da poter scegliere se la distanza dev'essere minore o maggiore di un certo valore. Ovviamente per utilizzare questa funzionalità bisogna avere a disposizione un sensore ad ultrasuoni.
-Queste impostazioni si passano al metodo come parametro: ```waitDistance(short sensore,int distanza, short modalità)```
+Queste impostazioni si passano al metodo come parametro: ``waitDistance(short sensore,int distanza, short modalità)``
 
 Come ho detto il precedenza la funzione permette la possibilità di essere tarata, questo si può fare tramite il parametro modalità. Se passo il valore 0 non fa altro che aspettare finchè il valore corrente (letto dal sensore) sia minore di quello passato (parametro "distanza"). Se si passa il valore 1 come modalità la funzione fa l'esatto contrario: aspetta finchè il valore corrente sia maggiore di quello passato.
 Il parametro "distanza" può avere un valore massimo di 255 cm.
@@ -269,7 +270,14 @@ Il parametro **degrees** serve per specificare per quanti gradi il motore dovrà
 
 #### goMotorRotations
 
+Questo metodo è utilizzato per far avanzare il motore con una determinata velocità facendolo ruotare per un determinato numero di giri. Inizialmente avevamo pensato di creare un codice unico per questa funzionalità ma poi abbiamo deciso di appoggiarci al metodo **goMotorDegrees** per evitare dei codici duplicati.
+Il metodo è utilizzabile in questo modo: ``goMotorRotations(short port, int rotations, byte power)``
+Il parametro **rotations** serve per specificare quante rotazioni dovrà fare il motore.
+
 #### stopMotor
+
+Questo metodo è utilizzato per fermare il motore. Questo metodo non fa altro che impostare la velocità del motore a 0.
+Il metodo è utilizzabile in questo modo: ``stopMotor(short port)``
 
 ### Explorer
 
@@ -335,8 +343,7 @@ consuntivo).
 
 ## Conclusioni
 
-
-La nostra soluzione aiuterà in un modo significante alle generazini future di sviluppare programmi più complessi da utilizzare nella First Lego League o nella WRO.
+La nostra soluzione aiuterà in un modo significante le generazioni future di sviluppare programmi complessi in modo veloce e più intuitivo rispetto alla programmazione grafica. Riteniamo che aiuterà soprattutto i futuri partecipanti della First Lego League e della WRO. 
 
 <!-- Quali sono le implicazioni della mia soluzione? Che impatto avrà?
 Cambierà il mondo? È un successo importante? È solo un’aggiunta
@@ -345,7 +352,9 @@ stato una perdita di tempo? I risultati ottenuti sono generali,
 facilmente generalizzabili o sono specifici di un caso particolare? ecc -->
 
 ### Sviluppi futuri
-  Nel futuro si potrebbero aggiungere delle funzionalità per semplificare ancora di più la programmazione del lego NXT robot. Una di queste funzionalità potrebbe essere il preciso sterzo del robot in base alla sua larghezza e al diametro della ruota.
+  In futuro si potrebbero aggiungere delle funzionalità per semplificare ancora di più la programmazione del lego NXT robot.
+  Una funzionalità molto utile potrebbe essere uno sterzo di precisione il quale avendo lunghezza del robot e diametro/raggio della ruota permette di far sterzare il robot in modo preciso.
+  Magari anche delle funzioni che si utilizzano spesso (per esempio il line follower oppure l'allineamento con una riga nera) potrebbero essere implementate direttamente nella libreria per velocizzare ulteriormente la programmazione.
   <!-- Migliorie o estensioni che possono essere sviluppate sul prodotto. -->
 
 ### Considerazioni personali
