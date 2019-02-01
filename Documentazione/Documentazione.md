@@ -53,22 +53,36 @@
 
 ### Abstract
 
+<<<<<<< HEAD
+  In this document we will describe how we made a library for the Lego Mindstorms NXT. The library needed to be simple to use. Before our solution the users needed to use the IDE provided by Lego and use the graphical interface which makes even a simple line follower a frustrating operation of needing to use the drag and drop function of the “Lego programming blocks”. We were tasked to make the process simpler creating a library with some useful functions for the various input-output interfaces (buttons, ultrasonic sensors, motors, etc.) that the NXT has to offer, furthermore it uses the standard coding format that a lot of programming languages use since it derives from C. We had the RobotC language to write the library. With the help of this library an average student should be able to do basic programs for the Lego NXT without any problems.
+
+### Scopo
+
+  Lo scopo del progetto è di creare delle librerie da utilizzare per la programmazione del blocchetto NXT. Lo scopo di questa libreria è rendere la programmazione del robot lego più semplice ed efficace aggiungendo delle funzionalità tipiche per ogni sensore del robot. Questo permette di salvare molto tempo nel processo di implementazione del codice.
+=======
   In this document we will describe how we made a library for the Lego Mindstorms NXT. The library needs to be simple to use. Before our solution the users needed to use the IDE provided by Lego, and use the graphical interface which makes even a simple line follower a frustrating operation of needing to use the drag and drop function of the “Lego programming blocks”. We were tasked to make the process simpler creating a library with some useful functions for the various input-output interfaces (buttons, ultrasonic sensors, motors, ecc.) that the NXT has to offer, furthermore it uses the standard coding format that a lot of programming languages use since the language that we are using derives from C. We are using the RobotC language to write the library. With the help of this library an average student should be able to do basic programs for the Lego NXT without any problems.
 
 ### Scopo
   Lo scopo del progetto è di creare una libreria da utilizzare per la programmazione del blocchetto NXT. Lo scopo di questa libreria è rendere la programmazione del robot lego più semplice ed efficace aggiungendo delle funzionalità tipiche per ogni sensore del robot. Questo permette di salvare molto tempo nel processo di implementazione del codice.
+>>>>>>> e3170c31fecf4f9fdf308916ed36743b3a2f10df
 
 ## Analisi
 
 ### Analisi del dominio
 
+<<<<<<< HEAD
   In questo momento il blocchetto NXT viene programmato tramite il programma grafico chiamato “Lego Mindstorms”, esso non necessita alcuna conoscenza di linguaggi di programmazione per essere utilizzato, questo perchè utilizza una programmazione grafica e non testuale.
   Essendo molto semplice la programmazione grafica si perdono diverse funzionalità che si possono riottenere cambiando approccio, e quindi passando alla programmazione nuda e cruda. Essa può essere svolta con il lunguaggio *RobotC*.
   Gli alunni che utilizzano i robot Lego non hanno mai programmato i blocchetti in un linguaggio differente da quello grafico, ma dispongono delle limitate conoscenze del linguaggio Java che è simile a RobotC.
+=======
+  In questo momento il blocchetto NXT viene programmato tramite il programma grafico chiamato “Lego Mindstorms”, esso non necessita alcuna conoscenza di linguaggi di programmazione per essere utilizzato, questo perché utilizza una programmazione grafica e non testuale.
+  Essendo molto semplice la programmazione grafica si perdono diverse funzionalità che si possono riottenere cambiando approccio, e quindi passando alla programmazione nuda e cruda. Essa può essere svolta con il linguaggio *RobotC*.
+  Gli alunni che utilizzano i robot Lego non hanno mai programmato i blocchetti in un linguaggio differente da quello grafico, ma dispongono delle limitate conoscenze del linguaggio Java.
+>>>>>>> 24c26bd3d53c7ceb9c0ac544b95ac2e0a446dd78
 
 ### Analisi e specifica dei requisiti
 
-  Il committente necessita di una libreria scritta nel linguaggio *RobotC* il quale scopo è quello di semplificare il processo di programmazione dei robot NXT della Lego. Esse devono comprendere dei metodi user-friendly (quindi che vengono richiamati e funzionano senza nessun bisogno di una programmazione aggiuntiva da parte dell'utilizzatore). Oltre alle libreria il committente necessita anche di una guida cartacea che spiega il processo di installazione dei firmware per far interagire la nostra libreria con il blocchetto.
+  Il committente necessita di una libreria scritta nel linguaggio *RobotC* il quale scopo è quello di semplificare il processo di programmazione dei robot NXT della Lego. Esse devono comprendere dei metodi user-friendly (quindi che vengono richiamati e funzionano senza nessun bisogno di una programmazione aggiuntiva da parte dell'utilizzatore). Oltre alle librerie il committente necessita anche di una guida cartacea che spiega il processo di installazione dei firmware per far interagire il nostro prodotto con il blocchetto.
   Per poter usufruire delle semplificazioni del codice che offre il nostro prodotto bisogna soltanto importare la libreria nel proprio file. Essa conterrà delle funzioni che svolgono delle funzioni prefabbricate. L'obbiettivo del nostro lavoro è di creare un prodotto plug-and-play, il quale non necessita molte conoscenze di programmazione per essere utilizzato. L'utente quindi dovrà interagire in modo minimo con il codice, l'unica cosa che dovrà fare è creare un algoritmo utilizzando le funzioni già scritte all'interno della nostra libreria, quindi non fa altro che fare un collage di funzioni al fine di raggiungere un algoritmo che svolge una/delle azioni desiderate.
 
   |ID  |REQ-001                                         |
@@ -118,10 +132,10 @@
 
 ### Analisi dei mezzi
 
-Per la realizzazione della libreria nel linguaggio RobotC useremo l'IDE di RobotC (v4.56) con la licenza fornita dalla scuola.
-Il prodotto verrà utilizzato dagli sviluppatori per programmare i loro algoritmi.
-La nostra soluzione verrà svulippata e testata utilizzando un Lego NXT.
-Per la comunicazione tra il pc è il blochettto lego abbiamo bisogno di un driver trovabile sul sito ufficiale di Lego, esso è chiamato *NXT Fantom Drivers v120*.
+Per la realizzazione della libreria nel linguaggio RobotC useremo l'IDE di RobotC (versione 4.56) con la licenza fornita dalla scuola.
+Il prodotto verrà utilizzato dagli sviluppatori per programmare le librerie richieste.
+La nostra soluzione verrà sviluppata e testata utilizzando un Robot Lego NXT.
+Per la comunicazione tra il pc è il blocchetto Lego abbiamo bisogno di un driver trovabile sul sito ufficiale di Lego, esso è chiamato *NXT Fantom Drivers v120*.
 
 Lista delle specifiche tecniche dei computer sui quali è stato realizzato l'intero progetto:
 <ol>
@@ -173,16 +187,21 @@ Per sviluppare la libreria contenete le varie funzioni di waiting (libreria Simp
 - waitLight
 - waitTouch
 
+In tutti i metodi il parametro **sensore** specifica il sensore/attuatore che andrà ad utilizzare.
+
 #### Wait
 
-Questo metodo è utilizzato per far aspettare/continuare un operazione per un determinato lasso di tempo (specificato in secondi).
-Il numero di secondi verrà passato al metodo tramite parametro: ```wait(float secondi)```.
-Questo metodo non fa altro che richiamare la funzione di sleep già implementata in RobotC. Abbiamo deciso di implementare questo metodo per avere un nome più autoesplicativo.
+Questo metodo è utilizzato per far aspettare/continuare un’operazione per un determinato lasso di tempo (specificato in secondi).
+Il metodo è utilizzabile in questo modo: ```wait(float secondi)```.
+Il parametro **seconds** è utilizzato per specificare la durata del waiting (in secondi, validi anche valori decimali)
+Questo metodo non fa altro che richiamare la funzione di sleep utilizzando già implementata in RobotC. Abbiamo deciso di implementare questo metodo per avere un nome più auto esplicativo.
+
 
 #### WaitNxtButtons
 
-Questo metodo è utilizzato per far aspettare/continuare un operazione finchè uno dei pulsanti del blocchetto (quelli posti sotto il display) venga premuto. Il pulsate da premere viene specificato come parametro al richiamo della funzione: ```waitNxtButtons(short id_pulsante)```
-
+Questo metodo è utilizzato per far aspettare/continuare un’operazione finché uno dei pulsanti del blocchetto (quelli posti sotto il display) venga premuto. 
+Il metodo è utilizzabile in questo modo: ``waitNxtButtons(short id_pulsante)``
+Il parametro **id_pulsande** serve per specificare quale pulsante del blocchetto deve venir premuto per terminare il processo di waiting. Questi sono i codici identificativi dei pulsanti del blocchetto:
 I codici identificativi dei pulsanti del blocchetto sono questi:
 
 0: Rettangolo grigio
@@ -192,35 +211,28 @@ I codici identificativi dei pulsanti del blocchetto sono questi:
 
 #### WaitDistance
 
-Questo metodo è utilizzato per far aspettare/continure un operazione finchè il sensore ultrasuoni (di distanza) non rileva una certa distanza. La funzione può essere "tarata" in modo da poter scegliere se la distanza dev'essere minore o maggiore di un certo valore. Ovviamente per utilizzare questa funzionalità bisogna avere a disposizione un sensore ad ultrasuoni.
-Queste impostazioni si passano al metodo come parametro: ``waitDistance(short sensore,int distanza, short modalità)``
-
-Come ho detto il precedenza la funzione permette la possibilità di essere tarata, questo si può fare tramite il parametro modalità. Se passo il valore 0 non fa altro che aspettare finchè il valore corrente (letto dal sensore) sia minore di quello passato (parametro "distanza"). Se si passa il valore 1 come modalità la funzione fa l'esatto contrario: aspetta finchè il valore corrente sia maggiore di quello passato.
-Il parametro "distanza" può avere un valore massimo di 255 cm.
-
-N.B. Il parametro "sensore" non è altro che la referenza al sensore.
+Questo metodo è utilizzato per far aspettare/continuare un’operazione finché il sensore ultrasuoni (di distanza) non rileva una certa distanza. La funzione può essere tarata in modo da poter scegliere se la distanza dev'essere minore o maggiore di un certo valore. Ovviamente per utilizzare questa funzionalità bisogna avere a disposizione un sensore ad ultrasuoni.
+Il metodo è utilizzabile in questo modo: ``waitDistance(short sensore, int distanza, short modalità)``
+Il parametro **distanza** specifica il target di distanza desiderato, esso può avere un valore massimo di 255 (i quali sarebbero centimetri). Il parametro **modalità** invece è utilizzato per specificare la condizione di fine del waiting. Se passo il valore 0 non fa altro che aspettare finché il valore letto dal sensore in tempo reale sia minore di **distanza** (target di distanza). Se si passa il valore 1 come modalità la funzione fa l'esatto contrario, quindi aspetta finché il valore corrente sia maggiore di quello di target.
 
 #### WaitMicrophone
 
-Questo metodo è utilizzato per far aspettare/continure un operazione finchè il microfono non rileva una certo valore di Db (Decibel). Anche questa funzione può essere tarata in modo da poter scegliere se il valore di Db dev'essere minore o maggiore di un certo valore. Ovviamente per utilizzare questa funzionalità bisogna avere a disposizione microfono.
-Queste impostazioni si passano al metodo come parametro: ```waitMicrophone(short sensore,int decibel, short modalità)```
-
-Il parametro "sensore" non è altro che una referenza al sensore (microfono in questo caso). Il parametro "modalità" invece serve per poter tarare la funzione.
-Se al parametro modalità viene passato il valore 0, la funzione aspetta finchè i Db letti dal microfono siano minori del valore passato nel parametro "decibel". Se si passa 1 la funzione aspetta finchè il valore letto dal microfono sia maggiore di quello passato come target.
+Questo metodo è utilizzato per far aspettare/continuare un’operazione finché il microfono non rileva un certo valore di DB (Decibel). Anche questa funzione può essere tarata in modo da poter scegliere se il valore di DB dev'essere minore o maggiore di un certo valore. Ovviamente per utilizzare questa funzionalità bisogna avere a disposizione microfono.
+Il metodo è utilizzabile in questo modo: ``waitMicrophone(short sensore, int decibel, short modalità)``
+Il parametro **decibel** specifica il target di decibel desiderato (i quali sarebbero centimetri). Il parametro **modalità** invece è utilizzato per specificare la condizione di fine del waiting. Se passo il valore 0 non fa altro che aspettare finché il valore letto dal sensore in tempo reale sia minore di **decibel** (target di decibel). Se si passa il valore 1 come modalità la funzione fa l'esatto contrario, quindi aspetta finché il valore corrente sia maggiore di quello di target.
 
 #### WaitLight
 
-Questo metodo è utilizzato per far aspettare/continure un operazione finchè il sensore di luce non rileva una certa percentuale di luce riflessa. Anche questa funzione può essere tarata in modo da poter scegliere se il valore di  dev'essere minore o maggiore di un certo valore. Ovviamente per utilizzare questa funzionalità bisogna avere a disposizione un sensore di luce.
-Queste impostazioni si passano al metodo come parametro: ```waitLight(short sensore,int percentuale_luce, short modalità)```
-
-Il parametro "sensore" non è altro che una referenza al sensore (sensore di luce in questo caso). Il parametro "modalità" invece serve per poter tarare la funzione.
-Se al parametro modalità viene passato il valore 0, la funzione aspetta finchè il valore letto dal sensore di luce sia minore del valore passato nel parametro "percentuale_luce". Se si passa 1 la funzione aspetta finchè il valore letto sensore di luce sia maggiore di quello passato come target.
+Questo metodo è utilizzato per far aspettare/continuare un’operazione finché il sensore di luce non rileva una certa percentuale di luce riflessa. Anche questa funzione può essere tarata in modo da poter scegliere se il valore dev’essere minore o maggiore di un certo valore. Ovviamente per utilizzare questa funzionalità bisogna avere a disposizione un sensore di luce.
+Queste impostazioni si passano al metodo come parametro: ``waitLight(short sensore, int percentuale_luce, short modalità)``
+Il parametro **percentuale_luce** specifica il target di percentuale di luce riflessa desiderato. Il parametro **modalità** invece è utilizzato per specificare la condizione di fine del waiting. Se passo il valore 0 non fa altro che aspettare finché il valore letto dal sensore in tempo reale sia minore di **percentuale_luce** (target di luce riflessa). Se si passa il valore 1 come modalità la funzione fa l'esatto contrario, quindi aspetta finché il valore corrente sia maggiore di quello di target.
 
 #### WaitTouch
 
-Questo metodo è utilizzato per far aspettare/continure un operazione finchè non avviene una determinata operazione sul sensore touch (pulsante). Questa "determinata azione" si può impostare al richiamo del metodo tramite il parametro mode: ```waitTouch(short port,short mode)```
+Questo metodo è utilizzato per far aspettare/continuare un’operazione finché non avviene una determinata operazione sul sensore touch (pulsante). 
+Il metodo è utilizzabile in questo modo: ``waitTouch(short port, short mode)``
+Il parametro *mode* ha 3 differenti opzioni. Se viene passato il valore 0 il metodo bloccherà il programma finché il pulsante verrà premuto (pressed). Se gli viene passato 1 invece aspetterà finché il pulsante sarà rilasciato (released) ed infine se viene impostato a 2 il programma aspetterà finché il pulsante viene premuto e rilasciato.
 
-Il parametro "mode" ha 3 diffenti opzioni. Se viene passato il valore 0 il metodo bloccherà il programma finchè il pulsante verrà premuto (pressed). Se gli viene passato 1 invece il programma aspetterà finchè il pulsante sarà rilasciato (released) ed infine se viene impostato a 2 il programma aspetterà finchè il pulsante viene premuto e rilasciato.
 
 ### SimpleMotorLib
 
@@ -238,7 +250,7 @@ In tutti i metodi il parametro **port** specifica il motore che andrà a control
 #### goMotorStandard
 
 Questo metodo è utilizzato per far avanzare il motore con una determinata velocità (di default la velocità è massima, quindi con il valore 127).
-Il metodo è utilizzabile in questo modo: ``goMotorStandard(short port, byte power)`` 
+Il metodo è utilizzabile in questo modo: ``goMotorStandard(short port, byte power)``
 
 #### goMotorSeconds
 
@@ -313,11 +325,13 @@ Per mostrare l'utilizzo delle noste librerie sviluppate abbiamo creato un progra
 |Test delle due classi che compongono la libreria  |TC-002 |passato    |
 
 ### Mancanze/limitazioni conosciute
-
+<!-- 
 Descrizione con motivazione di eventuali elementi mancanti o non
 completamente implementati, al di fuori dei test case. Non devono essere
 riportati gli errori e i problemi riscontrati e poi risolti durante il
 progetto.
+-->
+Certe operazioni per un programmatore principiante possono risultare  difficili, per esempio quando si vogliono svolgere contemporaneamente più azioni (in modo sincrono). Questo perchè necessitano dell'utilizzo di una *Task* (ovvero un *Thread*).  
 
 ## Consuntivo
 
@@ -336,6 +350,7 @@ stato una perdita di tempo? I risultati ottenuti sono generali,
 facilmente generalizzabili o sono specifici di un caso particolare? ecc -->
 
 ### Sviluppi futuri
+
   In futuro si potrebbero aggiungere delle funzionalità per semplificare ancora di più la programmazione del lego NXT robot.
   Una funzionalità molto utile potrebbe essere uno sterzo di precisione il quale avendo lunghezza del robot e diametro/raggio della ruota permette di far sterzare il robot in modo preciso.
   Magari anche delle funzioni che si utilizzano spesso (per esempio il line follower oppure l'allineamento con una riga nera) potrebbero essere implementate direttamente nella libreria per velocizzare ulteriormente la programmazione.
@@ -343,7 +358,7 @@ facilmente generalizzabili o sono specifici di un caso particolare? ecc -->
 
 ### Considerazioni personali
 
-  Cosa ho imparato in questo progetto? ecc
+  Con questo progetto abbiamo avuto la possibilità di sperimentare un nuovo tipo di programmazione sui robot Lego NXT. Inoltre abbiamo imparato ad utilizzare RobotC, rendendoci conto dei suoi pregi ed i suoi difetti. All'inizio ci trovavamo un po' spaesati ma dopo un po' di pratica ci siamo trovati molto bene con questo nuovo linguaggio di programmazione. 
 
 ### Sitografia
 
@@ -355,10 +370,8 @@ facilmente generalizzabili o sono specifici di un caso particolare? ecc -->
 
 ## Allegati
 
-<h1 style="color: red;">DA COMPLETARE </h1>
-
 - Diari di lavoro
-- Codici sorgente/documentazione macchine virtuali
-- Eventuali guide utente / Manuali di utilizzo
+- Codice sorgente del prodotto
+- Guida installazione driver blocchetto
 - Mandato e/o Qdc
 - Prodotto
