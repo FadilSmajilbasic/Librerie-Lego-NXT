@@ -248,11 +248,24 @@ Queste sono tutte le funzioni disponibili per i motori:
 - goMotorRotations
 - stopMotor
 
+In tutti i metodi il parametro **port** specifica il motore che andrà a controllare il metodo. La velocità di default (quindi se non viene inserito dall'utente un altro valore) è di 127 (velocità massima).
+
 #### goMotorStandard
+
+Questo metodo è utilizzato per far avanzare il motore con una determinata velocità (di default la velocità è massima, quindi con il valore 127).
+Il metodo è utilizzabile in questo modo: ``goMotorStandard(short port, byte power)`` 
 
 #### goMotorSeconds
 
+Questo metodo è utilizzato per far avanzare il motore con una determinata velocità per un determinato numero di secondi (secondi anche numeri decimali).
+Il metodo è utilizzabile in questo modo: ``goMotorSeconds(short port, float seconds , byte power)``
+Il parametro **seconds** serve per specificare il numero di secondi nei quali il motore avanzerà.
+
 #### goMotorDegrees
+
+Questo metodo è utilizzato per far avanzare il motore con una determinata velocità facendolo ruotare per un determinato numero di gradi.
+Il metodo è utilizzabile in questo modo: ``goMotorDegrees(short port, float degrees, byte power)``
+Il parametro **degrees** serve per specificare per quanti gradi il motore dovrà ruotare.
 
 #### goMotorRotations
 
@@ -345,10 +358,10 @@ facilmente generalizzabili o sono specifici di un caso particolare? ecc -->
 
 - http://www.robotc.net/forums/, *RobotC.net forums*, consultato più volte durante tutto l’arco dell’implementazione progetto
 
-- http://www.legoengineering.com/clicking-brick-syndrome/ Per risolvere i problemi durante l'installazione del firmware
-
+- http://www.legoengineering.com/clicking-brick-syndrome/, *Clicking brick syndrome - LEGO Engineering*, Consultato per risolvere i problemi durante l'installazione del firmware
 
 ## Allegati
+
 <h1 style="color: red;">DA COMPLETARE </h1>
 
 - Diari di lavoro
