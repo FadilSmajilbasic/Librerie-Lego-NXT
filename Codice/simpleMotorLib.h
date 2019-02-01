@@ -29,8 +29,8 @@ void goMotorDegrees(short port, float degrees, byte power = 127)
 	waitUntilMotorStop(motorId);
 }
 
-void goMotorRotations(short port, int giri, byte power = 127){
-	for(int i = 0; i < giri; i++){
+void goMotorRotations(short port, int rotations, byte power = 127){
+	for(int i = 0; i < rotations; i++){
 		goMotorDegrees(port,360,127);
 	}
 }
