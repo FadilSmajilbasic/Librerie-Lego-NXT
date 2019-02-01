@@ -1,46 +1,40 @@
-1. [Introduzione](#introduzione)
-
-  - [Informazioni sul progetto](#informazioni-sul-progetto)
-
-  - [Abstract](#abstract)
-
-  - [Scopo](#scopo)
-
-2. [Analisi](#analisi)
-
-  - [Analisi del dominio](#analisi-del-dominio)
-
-  - [Analisi dei mezzi](#analisi-dei-mezzi)
-
-  - [Analisi e specifica dei requisiti](#analisi-e-specifica-dei-requisiti)
-
-  - [Pianificazione](#pianificazione)
-
-3. [Progettazione](#progettazione)
-
-  - [Design dei dati e database](#design-dei-dati-e-database)
-
-4. [Implementazione](#implementazione)
-
-5. [Test](#test)
-
-  - [Protocollo di test](#protocollo-di-test)
-
-  - [Risultati test](#risultati-test)
-
-  - [Mancanze/limitazioni conosciute](#mancanze/limitazioni-conosciute)
-
-6. [Consuntivo](#consuntivo)
-
-7. [Conclusioni](#conclusioni)
-
-  - [Sviluppi futuri](#sviluppi-futuri)
-
-  - [Considerazioni personali](#considerazioni-personali)
-
-8. [Sitografia](#sitografia)
-
-9. [Allegati](#allegati)
+- [Introduzione](#introduzione)
+  * [Informazioni sul progetto](#informazioni-sul-progetto)
+  * [Abstract](#abstract)
+  * [Scopo](#scopo)
+- [Analisi](#analisi)
+  * [Analisi del dominio](#analisi-del-dominio)
+  * [Analisi e specifica dei requisiti](#analisi-e-specifica-dei-requisiti)
+  * [Pianificazione](#pianificazione)
+  * [Analisi dei mezzi](#analisi-dei-mezzi)
+- [Progettazione](#progettazione)
+  * [Design dei dati e database](#design-dei-dati-e-database)
+- [Implementazione](#implementazione)
+  * [SimpleWaitLib](#simplewaitlib)
+    + [Wait](#wait)
+    + [WaitNxtButtons](#waitnxtbuttons)
+    + [WaitDistance](#waitdistance)
+    + [WaitMicrophone](#waitmicrophone)
+    + [WaitLight](#waitlight)
+    + [WaitTouch](#waittouch)
+  * [SimpleMotorLib](#simplemotorlib)
+    + [goMotorStandard](#gomotorstandard)
+    + [goMotorSeconds](#gomotorseconds)
+    + [goMotorDegrees](#gomotordegrees)
+    + [goMotorRotations](#gomotorrotations)
+    + [stopMotor](#stopmotor)
+  * [Explorer](#explorer)
+      - [Il diagramma di flusso del programma](#il-diagramma-di-flusso-del-programma)
+- [Test](#test)
+  * [Protocollo di test](#protocollo-di-test)
+  * [Risultati test](#risultati-test)
+  * [Mancanze/limitazioni conosciute](#mancanze-limitazioni-conosciute)
+- [Consuntivo](#consuntivo)
+- [Conclusioni](#conclusioni)
+  * [Sviluppi futuri](#sviluppi-futuri)
+  * [Considerazioni personali](#considerazioni-personali)
+  * [Sitografia](#sitografia)
+- [Allegati](#allegati)
 
 <div style="page-break-after: always;"></div>
 
@@ -111,10 +105,10 @@
 ###  Pianificazione
 
 ![gantt](img/preventivo.png)
-<!-- <div style="page-break-after: always; height: 500px; padding-top: 200px;">
-<img src="img/preventivo.png" style="transform: rotate(90deg); ">
-</div> -->
-<!-- <div style="page-break-after: always;"></div> -->
+ <!-- <div style="page-break-after: always; height: 500px; padding-top: 200px;">
+<img src="img/preventivo.png" style="transform: rotate(90deg); min-width: 800px; ">
+</div> 
+<div style="page-break-after: always;"></div> -->
 
 ### Analisi dei mezzi
 
