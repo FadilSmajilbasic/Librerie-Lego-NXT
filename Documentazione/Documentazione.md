@@ -358,6 +358,6 @@ facilmente generalizzabili o sono specifici di un caso particolare? ecc -->
 
 - Diari di lavoro
 - Codice sorgente del prodotto
-- Guida installazione driver blocchetto
+- Guida installazione firmware
 - Mandato e/o Qdc
 - Prodotto
