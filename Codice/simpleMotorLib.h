@@ -23,19 +23,19 @@ void goMotorSeconds(short port, float seconds , byte power = 127)
 	wait1Msec(1000);
 }
 
-void goMotorDegrees(short motorId, float degrees, byte power = 127)
+void goMotorDegrees(short port, float degrees, byte power = 127)
 {
-	setMotorTarget(motorId, degrees, power);
+	setMotorTarget(port, degrees, power);
 	waitUntilMotorStop(motorId);
 }
 
-void goMotorRotations(short motorId, int giri, byte power = 127){
-	for(int i = 0; i < giri; i++){
-		goMotorDegrees(motorId,360,127);
+void goMotorRotations(short port, int rotations, byte power = 127){
+	for(int i = 0; i < rotations; i++){
+		goMotorDegrees(port,360,127);
 	}
 }
 
-void stopMotor(short motorId)
+void stopMotor(short port)
 {
-	motor[motorId] = 0;
+	motor[port] = 0;
 }

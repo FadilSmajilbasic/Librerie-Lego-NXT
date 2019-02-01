@@ -4,7 +4,7 @@
 /// <module name="SimpleWaitLib.h" />
 ///
 /// <summary>
-///     This module contains all the wait functions
+///     This module contains all the waiting functions
 /// </summary>
 ///
 /// <remarks>
@@ -16,13 +16,14 @@ void wait(float time){
 	wait1Msec(time * 1000);
 }
 
-void waitNxtButtons(short button){
+void waitNxtButtons(short port){
 	/*
 		0 = Gray Rectangle button.
 		1 = Right Arrow button.
 		2 = Left Arrow button.
 		3 = Orange Square button
 	*/
+
 	while(true){
 		if(nNxtButtonPressed == button){break;}
 	}
@@ -68,7 +69,7 @@ void waitMicrophone(short port,int db,short mode){
 	}
 }
 
-void waitLight(short port,int light_value ,short mode){
+void waitLight(short port, int light_value, short mode){
 	//MODE == 0 -> LESS
 	//MODE == 1 -> GREATER
 
@@ -90,7 +91,7 @@ void waitLight(short port,int light_value ,short mode){
 	}
 }
 
-void waitTouch(short port,short mode){
+void waitTouch(short port, short mode){
 	//MODE == 0 -> PRESSED
 	//MODE == 1 -> RELEASED
 	//MODE == 2 -> CLICKED
@@ -124,20 +125,19 @@ void waitTouch(short port,short mode){
 		bool wasReleased = false;
 
 		while(true){
-				currentState = (bool) SensorValue(port);
+			currentState = (bool) SensorValue(port);
 
-				if(currentState == 1 && preState == 0){
-					wasPressed = true;
-				}
+			if(currentState == 1 && preState == 0){
+				wasPressed = true;
+			}
 
-				if(currentState == 0 && preState == 1){
-					wasReleased = true;
-				}
+			if(currentState == 0 && preState == 1){
+				wasReleased = true;
+			}
 
-				preState = currentState;
+			preState = currentState;
 
-
-				if(wasPressed && wasReleased){break;}
+			if(wasPressed && wasReleased){break;}
 		}
 	}
 }
