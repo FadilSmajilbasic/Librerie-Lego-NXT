@@ -20,8 +20,8 @@ void goMotorStandard(short port, byte power = 127)
 
 void goMotorSeconds(short port, float seconds , byte power = 127)
 {
-	//Imposto la velocità al motore appoggiandomi al metodo "goMotorStandad"
-	goMotorStandard(port,power)
+	//Imposto la velocit� al motore appoggiandomi al metodo "goMotorStandad"
+	goMotorStandard(port,power);
 
 	//Imposto il tempo di sleep
 	wait1Msec(seconds * 1000);
@@ -31,7 +31,7 @@ void goMotorDegrees(short port, float degrees, byte power = 127)
 {
 	//Imposto a quanti gradi deve arrivare
 	setMotorTarget(port, degrees, power);
-	
+
 	//Faccio girare il motore finchè non gira dei gradi passati
 	waitUntilMotorStop(port);
 }

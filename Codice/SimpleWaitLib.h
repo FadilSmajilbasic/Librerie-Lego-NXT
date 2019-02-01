@@ -18,7 +18,7 @@ void wait(float seconds){
 	wait1Msec(seconds * 1000);
 }
 
-void waitNxtButtons(short port){
+void waitNxtButtons(short button){
 	/*
 		Id dei pulsanti del blocchetto:
 
@@ -29,7 +29,7 @@ void waitNxtButtons(short port){
 	*/
 
 	while(true){
-		
+
 		/*
 			Blocca il programma finchè non rileva che l'id del pulsante
 			premuto sia identico a quello richiesto
@@ -39,7 +39,7 @@ void waitNxtButtons(short port){
 }
 
 void waitDistance(short port,int distance,short mode){
-	
+
 	//MODE == 0 -> LESS
 	//MODE == 1 -> GREATER
 
@@ -50,7 +50,7 @@ void waitDistance(short port,int distance,short mode){
 		while(true){
 			//Legge la distanza corrente
 			float curr_distance = SensorValue(port);
-			
+
 			//Blocca il programma finchè la distanza corrente diventa minore del target passato
 			if(curr_distance < distance){break;}
 		}
@@ -134,7 +134,7 @@ void waitTouch(short port, short mode){
 
 			//Blocca il programma finchè non rileva che il pulsante è stato premuto
 			if(currentState == 1 && preState == 0){break;}
-			
+
 			//Imposta lo stato corrente come stato precedente
 			preState = currentState;
 		}
