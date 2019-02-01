@@ -64,7 +64,7 @@
 
   In questo momento il blocchetto NXT viene programmato tramite il programma grafico chiamato “Lego Mindstorms”, esso non necessita alcuna conoscenza di linguaggi di programmazione per essere utilizzato, questo perchè utilizza una programmazione grafica e non testuale.
   Essendo molto semplice la programmazione grafica si perdono diverse funzionalità che si possono riottenere cambiando approccio, e quindi passando alla programmazione nuda e cruda. Essa può essere svolta con il lunguaggio *RobotC*.
-  Gli alunni che utilizzano i robot Lego non hanno mai programmato i blocchetti in un linguaggio differente da quello grafico, ma dispongono delle limitate conoscenze del linguaggio Java.
+  Gli alunni che utilizzano i robot Lego non hanno mai programmato i blocchetti in un linguaggio differente da quello grafico, ma dispongono delle limitate conoscenze del linguaggio Java che è simile a RobotC.
 
 ### Analisi e specifica dei requisiti
 
@@ -108,9 +108,13 @@
   |            |**Sotto requisiti**|
   |**001**      | Explorer con 4 sensori (Ultrasuoni, due touch, un sensore di luce)|
 
-### Pianificazione
+###  Pianificazione
 
 ![gantt](img/preventivo.png)
+<!-- <div style="page-break-after: always; height: 500px; padding-top: 200px;">
+<img src="img/preventivo.png" style="transform: rotate(90deg); ">
+</div> -->
+<!-- <div style="page-break-after: always;"></div> -->
 
 ### Analisi dei mezzi
 
@@ -154,8 +158,7 @@ Nell'immagine sottostante è raffigurato il diagramma UML raffigurante la strutt
 ## Implementazione
 
 Come descritto in precedenza, sotto la sezione [*Scopo*](#scopo) , il nostro compito è stato quello di creare delle librerie che semplificano la programmazione dei robot NXT. Noi abbiamo sviluppato due librerie:
-La prima è chiamata "SimpleWaitLib", la quale contiene tutti i tipi di wait presenti. La seconda libreria invece si chiama "SimpleMotorLib", la quale implementa delle funzionalità semplificate
-per l'utilizzo dei motori.
+La prima è chiamata "SimpleWaitLib", la quale contiene tutti i tipi di wait presenti. La seconda libreria invece si chiama "SimpleMotorLib", la quale implementa delle funzionalità semplificate per l'utilizzo dei motori.
 Avevamo pensato di implementare una libreria per sensore ed attuatore, ma abbiamo notato che RobotC metteva già a disposizione del programmatore delle funzioni già fatte. L'unico attuatore che non presentava funzionalità
 prefabbricate era proprio il motore, questo ci ha obbligato a sviluppare noi le funzioni mancanti.
 
