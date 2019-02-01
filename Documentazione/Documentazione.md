@@ -108,9 +108,13 @@
   |            |**Sotto requisiti**|
   |**001**      | Explorer con 4 sensori (Ultrasuoni, due touch, un sensore di luce)|
 
-### Pianificazione
+###  Pianificazione
 
 ![gantt](img/preventivo.png)
+<!-- <div style="page-break-after: always; height: 500px; padding-top: 200px;">
+<img src="img/preventivo.png" style="transform: rotate(90deg); ">
+</div> -->
+<!-- <div style="page-break-after: always;"></div> -->
 
 ### Analisi dei mezzi
 
@@ -154,8 +158,7 @@ Nell'immagine sottostante è raffigurato il diagramma UML raffigurante la strutt
 ## Implementazione
 
 Come descritto in precedenza, sotto la sezione [*Scopo*](#scopo) , il nostro compito è stato quello di creare delle librerie che semplificano la programmazione dei robot NXT. Noi abbiamo sviluppato due librerie:
-La prima è chiamata "SimpleWaitLib", la quale contiene tutti i tipi di wait presenti. La seconda libreria invece si chiama "SimpleMotorLib", la quale implementa delle funzionalità semplificate
-per l'utilizzo dei motori.
+La prima è chiamata "SimpleWaitLib", la quale contiene tutti i tipi di wait presenti. La seconda libreria invece si chiama "SimpleMotorLib", la quale implementa delle funzionalità semplificate per l'utilizzo dei motori.
 Avevamo pensato di implementare una libreria per sensore ed attuatore, ma abbiamo notato che RobotC metteva già a disposizione del programmatore delle funzioni già fatte. L'unico attuatore che non presentava funzionalità
 prefabbricate era proprio il motore, questo ci ha obbligato a sviluppare noi le funzioni mancanti.
 
