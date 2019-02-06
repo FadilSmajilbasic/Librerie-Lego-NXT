@@ -102,13 +102,13 @@
   |            |**Sotto requisiti**|
   |**001**      | Explorer con 4 sensori (Ultrasuoni, due touch, un sensore di luce)|
 
+
+
 ###  Pianificazione
 
 ![gantt](img/preventivo.png)
- <!-- <div style="page-break-after: always; height: 500px; padding-top: 200px;">
-<img src="img/preventivo.png" style="transform: rotate(90deg); min-width: 800px; ">
-</div> 
-<div style="page-break-after: always;"></div> -->
+
+###### [Figura 1] rappresenta il gantt della prima pianificazione
 
 ### Analisi dei mezzi
 
@@ -148,6 +148,7 @@ Lista delle specifiche tecniche dei computer sui quali è stato realizzato l'int
 Nell'immagine sottostante è raffigurato il diagramma UML raffigurante la struttura delle varie classi che abbiamo utilizzato per lo sviluppo della libreria:
 
 ![Diagramma delle classi](img/Classes.png)
+###### [Figura 2] Rappresenta il diagramma UML delle classi e i metodi di ogniuna
 
 ## Implementazione
 
@@ -263,6 +264,8 @@ Per mostrare l'utilizzo delle noste librerie sviluppate abbiamo creato un progra
 
 ![DiagrammaDiFlussoExplorer](img/DiagrammaDiFlussoExplorer.png)
 
+###### [Figura 3] Rappresenta il diagramma di flusso del programma Explorer
+
 ## Test
 
 ### Protocollo di test
@@ -285,18 +288,6 @@ Per mostrare l'utilizzo delle noste librerie sviluppate abbiamo creato un progra
 |**Risultati attesi** | Si aspettano prestazioni ottimali del robot utilizzando le libreria scritta in robotC e un corretto funzionamento dei metodi |
 
 
-
-<!-- #### template test case:
-|Test Case       | TC-003                             |
-|----------------|--------------------------------------|
-|**Nome**        |`*NAME*` |
-|**Riferimento** | REQ-001                          |
-|**Descrizione** |Verificare la giusta funzionalità del metodo methodName della libreria SimpleWaitLib |
-|**Prerequisiti**| Finire di scrivere la libreria<br>Collegare un motore alla porta A <br> Collegare il sensore nella porta  |
-|**Procedura**   | - Creare un file di test <br> - Inserire il riferimento alla libreria con `#include "SimpleWaitLib.h"` <br> - eseguire il seguente pezzo di codice: `*CODE*` |
-|**Risultati attesi** |  | -->
-
-
 ### Risultati test
 
 | Nome    | ID    | Risultato |
@@ -305,19 +296,12 @@ Per mostrare l'utilizzo delle noste librerie sviluppate abbiamo creato un progra
 |Test delle due classi che compongono la libreria  |TC-002 |passato    |
 
 ### Mancanze/limitazioni conosciute
-<!-- 
-Descrizione con motivazione di eventuali elementi mancanti o non
-completamente implementati, al di fuori dei test case. Non devono essere
-riportati gli errori e i problemi riscontrati e poi risolti durante il
-progetto.
--->
+
 Certe operazioni per un programmatore principiante possono risultare  difficili, per esempio quando si vogliono svolgere contemporaneamente più azioni (in modo sincrono). Questo perchè necessitano dell'utilizzo di un'altra *Task* (quindi necessita l'utilizzo di un *Thread*).  
 
 ## Consuntivo
 
-Consuntivo del tempo di lavoro effettivo e considerazioni riguardo le
-differenze rispetto alla pianificazione (cap 1.7) (ad esempio Gannt
-consuntivo).
+![Gantt consuntivo](img/Consuntivo.png)
 
 ## Conclusioni
 
