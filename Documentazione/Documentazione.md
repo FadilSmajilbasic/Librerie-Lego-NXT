@@ -182,7 +182,7 @@ Questo metodo non fa altro che richiamare la funzione di sleep utilizzando già 
 
 Questo metodo è utilizzato per far aspettare/continuare un’operazione finché uno dei pulsanti del blocchetto (quelli posti sotto il display) venga premuto. 
 Il metodo è utilizzabile in questo modo: ``waitNxtButtons(short id_pulsante)``
-Il parametro **id_pulsande** serve per specificare quale pulsante del blocchetto deve venir premuto per terminare il processo di waiting. Questi sono i codici identificativi dei pulsanti del blocchetto:
+Il parametro **id_pulsante** serve per specificare quale pulsante del blocchetto deve venir premuto per terminare il processo di waiting. Questi sono i codici identificativi dei pulsanti del blocchetto:
 I codici identificativi dei pulsanti del blocchetto sono questi:
 
 0: Rettangolo grigio
