@@ -307,12 +307,6 @@ Certe operazioni per un programmatore principiante possono risultare  difficili,
 
 La nostra soluzione aiuterà in un modo significante le generazioni future di sviluppare programmi complessi in modo veloce e più intuitivo rispetto alla programmazione grafica. Riteniamo che aiuterà soprattutto i futuri partecipanti della First Lego League e della WRO. 
 
-<!-- Quali sono le implicazioni della mia soluzione? Che impatto avrà?
-Cambierà il mondo? È un successo importante? È solo un’aggiunta
-marginale o è semplicemente servita per scoprire che questo percorso è
-stato una perdita di tempo? I risultati ottenuti sono generali,
-facilmente generalizzabili o sono specifici di un caso particolare? ecc -->
-
 ### Sviluppi futuri
 
   In futuro si potrebbero aggiungere delle funzionalità per semplificare ancora di più la programmazione del lego NXT robot.
