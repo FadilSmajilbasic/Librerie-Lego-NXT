@@ -326,7 +326,7 @@
 											"top": 231,
 											"width": 317.560546875,
 											"height": 13,
-											"text": "SimpleWait"
+											"text": "SimpleWaitLib"
 										},
 										{
 											"_type": "LabelView",
@@ -1259,7 +1259,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "SimpleWait",
+					"name": "SimpleWaitLib",
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -1275,7 +1275,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFnrOlVrlpe8aE="
 									},
-									"name": "float seconds"
+									"name": "float seconds",
+									"type": ""
 								}
 							]
 						},
@@ -1293,7 +1294,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFnrOnRqlpnkmc="
 									},
-									"name": "byte port"
+									"name": "byte port",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -1301,7 +1303,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFnrOnRqlpnkmc="
 									},
-									"name": "short mode"
+									"name": "short mode",
+									"type": ""
 								}
 							]
 						},
@@ -1319,7 +1322,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFnrTvLjFsBUzo="
 									},
-									"name": "short port"
+									"name": "short port",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -1327,7 +1331,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFnrTvLjFsBUzo="
 									},
-									"name": "int distance"
+									"name": "int distance",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -1335,7 +1340,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFnrTvLjFsBUzo="
 									},
-									"name": "short mode"
+									"name": "short mode",
+									"type": ""
 								}
 							]
 						},
@@ -1353,7 +1359,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFnrT5wzVsMxHY="
 									},
-									"name": "short port"
+									"name": "short port",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -1361,7 +1368,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFnrT5wzVsMxHY="
 									},
-									"name": "int light_value"
+									"name": "int light_value",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -1369,7 +1377,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFnrT5wzVsMxHY="
 									},
-									"name": "short mode"
+									"name": "short mode",
+									"type": ""
 								}
 							]
 						},
@@ -1406,7 +1415,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFoqZXD8n+N0Tk="
 									},
-									"name": "short port"
+									"name": "short port",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -1414,7 +1424,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFoqZXD8n+N0Tk="
 									},
-									"name": "int db"
+									"name": "int db",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -1422,7 +1433,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFoqZXD8n+N0Tk="
 									},
-									"name": "short mode"
+									"name": "short mode",
+									"type": ""
 								}
 							]
 						}
