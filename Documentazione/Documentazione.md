@@ -312,7 +312,7 @@ La nostra soluzione aiuterà in un modo significante le generazioni future di sv
   In futuro si potrebbero aggiungere delle funzionalità per semplificare ancora di più la programmazione del lego NXT robot.
   Una funzionalità molto utile potrebbe essere uno sterzo di precisione il quale avendo lunghezza del robot e diametro/raggio della ruota permette di far sterzare il robot in modo preciso.
   Magari anche delle funzioni che si utilizzano spesso (per esempio il line follower oppure l'allineamento con una riga nera) potrebbero essere implementate direttamente nella libreria per velocizzare ulteriormente la programmazione.
-  <!-- Migliorie o estensioni che possono essere sviluppate sul prodotto. -->
+  
 
 ### Considerazioni personali
 
