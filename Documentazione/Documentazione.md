@@ -184,7 +184,7 @@ Questo metodo non fa altro che richiamare la funzione di sleep utilizzando già 
 
 Questo metodo è utilizzato per far aspettare/continuare un’operazione finché uno dei pulsanti del blocchetto (quelli posti sotto il display) venga premuto. 
 Il metodo è utilizzabile in questo modo: ``waitNxtButtons(short id_pulsante)``
-Il parametro **id_pulsande** serve per specificare quale pulsante del blocchetto deve venir premuto per terminare il processo di waiting. Questi sono i codici identificativi dei pulsanti del blocchetto:
+Il parametro **id_pulsante** serve per specificare quale pulsante del blocchetto deve venir premuto per terminare il processo di waiting. Questi sono i codici identificativi dei pulsanti del blocchetto:
 I codici identificativi dei pulsanti del blocchetto sono questi:
 
 0: Rettangolo grigio
@@ -309,18 +309,12 @@ Certe operazioni per un programmatore principiante possono risultare  difficili,
 
 La nostra soluzione aiuterà in un modo significante le generazioni future di sviluppare programmi complessi in modo veloce e più intuitivo rispetto alla programmazione grafica utilizzata in precedenza. Riteniamo che aiuterà soprattutto i futuri partecipanti della First Lego League e della WRO.
 
-<!-- Quali sono le implicazioni della mia soluzione? Che impatto avrà?
-Cambierà il mondo? È un successo importante? È solo un’aggiunta
-marginale o è semplicemente servita per scoprire che questo percorso è
-stato una perdita di tempo? I risultati ottenuti sono generali,
-facilmente generalizzabili o sono specifici di un caso particolare? ecc -->
-
 ### Sviluppi futuri
 
   In futuro si potrebbero aggiungere delle funzionalità per semplificare ancora di più la programmazione del lego NXT robot.
   Una funzionalità molto utile potrebbe essere uno sterzo di precisione il quale avendo lunghezza del robot e diametro/raggio della ruota permette di far sterzare il robot in modo preciso.
   Magari anche delle funzioni che si utilizzano spesso (per esempio il line follower oppure l'allineamento con una riga nera) potrebbero essere implementate direttamente nella libreria per velocizzare ulteriormente la programmazione.
-  <!-- Migliorie o estensioni che possono essere sviluppate sul prodotto. -->
+  
 
 ### Considerazioni personali
 
