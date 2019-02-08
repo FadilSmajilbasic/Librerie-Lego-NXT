@@ -43,13 +43,14 @@
 ### Informazioni sul progetto
 
   Il progetto è gestito e realizzato dall’allievo Luca Di Bello e Fadil Smajlbasic (studenti di informatica all’Arti e Mestieri di Trevano) sotto la supervisione del professor Luca Muggiasca, Adriano Barchi, Francesco Mussi e Massimo Sartori.
-  La realizzazione del progetto inizia il 16 novembre 2018 (16/11/18) e dovrà essere consegnato entro il 08.02.19
+  La realizzazione del progetto inizia il 16 novembre 2018 (16/11/18) e dovrà essere consegnato entro il 08.02.19.
 
 ### Abstract
 
   In this document we will describe how we made a library for the Lego Mindstorms NXT. The library needs to be simple to use. Before our solution the users needed to use the IDE provided by Lego, and use the graphical interface which makes even a simple line follower a frustrating operation of needing to use the drag and drop function of the “Lego programming blocks”. We were tasked to make the process simpler creating a library with some useful functions for the various input-output interfaces (buttons, ultrasonic sensors, motors, ecc.) that the NXT has to offer, furthermore it uses the standard coding format that a lot of programming languages use since the language that we are using derives from C. We are using the RobotC language to write the library. With the help of this library an average student should be able to do basic programs for the Lego NXT without any problems.
 
 ### Scopo
+
   Lo scopo del progetto è di creare una libreria da utilizzare per la programmazione del blocchetto NXT. Lo scopo di questa libreria è rendere la programmazione del robot lego più semplice ed efficace aggiungendo delle funzionalità tipiche per ogni sensore del robot. Questo permette di salvare molto tempo nel processo di implementazione del codice.
 
 ## Analisi
@@ -71,8 +72,8 @@
   |**Priorità**|1                     |
   |**Versione**|1.0                   |
   |            |**Sotto requisiti**|
-  |**001**      | Classe per l'utilizzo semplificato dei motori|
-  |**002**      | Classe che implementa tutti i tipi di wait presenti in Lego MindStorms|
+  |**001**      | Libreria per l'utilizzo semplificato dei motori |
+  |**002**      | Libreria che implementa tutti i tipi di wait presenti in Lego MindStorms|
   |**003**      | Codice ben commentato (Inglese o Italiano)|
 
   |ID  |REQ-002                                         |
@@ -83,7 +84,7 @@
   |**Note**    | Da consegnare alla fine del progetto in allegato alla documentazione|
   |            |**Sotto requisiti**|
   |**001**      | Guida all'installazione dei firmware sul blocchetto|
-  |**002**      | Guida che istruisce l'utente all'utilizzo del blocchetto|
+  |**002**      | Guida che istruisce l'utente all'utilizzo delle librerie |
 
   |ID  |REQ-003                                         |
   |----|------------------------------------------------|
@@ -148,6 +149,7 @@ Lista delle specifiche tecniche dei computer sui quali è stato realizzato l'int
 Nell'immagine sottostante è raffigurato il diagramma UML raffigurante la struttura delle varie classi che abbiamo utilizzato per lo sviluppo della libreria:
 
 ![Diagramma delle classi](img/Classes.png)
+
 ###### [Figura 2] Rappresenta il diagramma UML delle classi e i metodi di ogniuna
 
 ## Implementazione
@@ -211,7 +213,7 @@ Il parametro **percentuale_luce** specifica il target di percentuale di luce rif
 #### WaitTouch
 
 Questo metodo è utilizzato per far aspettare/continuare un’operazione finché non avviene una determinata operazione sul sensore touch (pulsante). 
-Il metodo è utilizzabile in questo modo: ``waitTouch(short port, short mode)``
+Il metodo è utilizzabile in questo modo: ``waitTouch(short sensore, short mode)``
 Il parametro *mode* ha 3 differenti opzioni. Se viene passato il valore 0 il metodo bloccherà il programma finché il pulsante verrà premuto (pressed). Se gli viene passato 1 invece aspetterà finché il pulsante sarà rilasciato (released) ed infine se viene impostato a 2 il programma aspetterà finché il pulsante viene premuto e rilasciato.
 
 
@@ -226,7 +228,7 @@ Queste sono tutte le funzioni disponibili per i motori:
 - goMotorRotations
 - stopMotor
 
-In tutti i metodi il parametro **port** specifica il motore che andrà a controllare il metodo. La velocità di default (quindi se non viene inserito dall'utente un altro valore) è di 127 (velocità massima).
+In tutti i metodi il parametro **port** specifica il motore che andrà a controllare il metodo. Mentre il parametro **power** specifica la velocità con la quale il motore girerà. La velocità di default (quindi se non viene inserito dall'utente un altro valore) è di 127 (velocità massima).
 
 #### goMotorStandard
 
@@ -305,7 +307,7 @@ Certe operazioni per un programmatore principiante possono risultare  difficili,
 
 ## Conclusioni
 
-La nostra soluzione aiuterà in un modo significante le generazioni future di sviluppare programmi complessi in modo veloce e più intuitivo rispetto alla programmazione grafica. Riteniamo che aiuterà soprattutto i futuri partecipanti della First Lego League e della WRO. 
+La nostra soluzione aiuterà in un modo significante le generazioni future di sviluppare programmi complessi in modo veloce e più intuitivo rispetto alla programmazione grafica utilizzata in precedenza. Riteniamo che aiuterà soprattutto i futuri partecipanti della First Lego League e della WRO.
 
 <!-- Quali sono le implicazioni della mia soluzione? Che impatto avrà?
 Cambierà il mondo? È un successo importante? È solo un’aggiunta
